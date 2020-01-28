@@ -1,0 +1,111 @@
+.programs{
+	padding-bottom: rem(53);
+	h2{
+		margin-bottom: 32px;
+		@include max-screen(576px){
+			margin-bottom: 24px;
+		}  
+	}
+	.programs-nav{
+		li{
+			&:first-child{
+				// display: inline-block;
+
+				// vertical-align: middle;
+
+				// margin-right: 10px;
+
+				padding: 6px 15px;
+
+				font-size: 15px;
+				@extend .button;
+				// @extend .button-sm;
+			}
+		}
+	}
+	.ams-card-wrapper{
+		.ams-card{
+
+			&:last-child{
+				@include max-screen(576px){
+					margin-bottom: 0;
+					
+				}  
+			}
+
+		}
+	}
+	@include max-screen(576px){
+		padding-bottom: 0;
+	}  
+}
+.programs-nav-container{
+	@include col();
+	@include size(12);
+	margin-bottom: 50px;
+
+	span{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			padding: 6px 15px;
+			font-size: 15px;
+			@extend .button;
+			&:hover{
+				background-color: $accent;
+			}
+	}
+	@include max-screen(576px){
+		margin-bottom: 0;
+	}  
+	
+}
+.programs-nav{
+	display: inline-block;
+	margin-left: -10px;
+	vertical-align: middle;
+	li{
+		list-style-type: none;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+
+		a{
+			display: block;
+			padding: 6px 15px;
+			font-size: 15px;
+			border-radius: 5px;
+			text-decoration: none;
+			color: $text;
+			font-family: $bold;
+			text-transform: uppercase;
+
+			&:hover{
+				background: $accent;
+				color: #fff;
+			}
+
+		}
+
+		&.active{
+			a{
+				background: $accent;
+				color: #fff;
+			}
+		}
+		&:first-child{
+			// padding: 6px 15px;
+			// margin-left: 0;
+			// @extend .button;
+			// &:hover{
+			// 	background-color: $accent;
+			// }
+			
+			// @extend .button-;
+		}
+
+		@include max-screen(768px){
+			margin-bottom: 25px;
+		}  
+	}
+}

@@ -1,0 +1,167 @@
+.indicators{
+	padding-top: rem(109);
+	padding-bottom: rem(75);
+
+	@include max-screen(576px){
+		margin-bottom: 0;
+		padding-bottom: 40px;
+	}  
+}
+.indicators-left{
+	@include col();
+	@include size(7);
+	@include size-sm(12);
+	// outline: 1px solid;
+
+	@include max-screen(768px){
+		margin-bottom: 20px;
+	}  
+}
+.indicators-right{
+	@include col();
+	@include size(5);
+	@include size-sm(12);
+	// outline: 1px solid;
+}
+.indicators-right__img{
+	margin-bottom: 35px;
+	text-align: right;
+
+	img{
+		max-width: 400px;
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+		@include max-screen(1100px){
+			max-width: 100%;
+		}  
+	}
+
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	
+}
+.indicators-logo{
+	max-width: 530px;
+	margin-bottom: rem(70);
+	img{
+		width: 100%;
+	}
+}
+.indicators-block{
+	margin-bottom: rem(100);
+
+	div, p{
+		display: inline-block;
+		vertical-align: bottom;
+
+	}
+
+	p{
+		max-width: 225px;
+		margin: 0;
+		@include max-screen(576px){
+			display: block;
+			margin-top: 10px;
+		}  
+		@include max-screen(358px){
+			font-size: 13px;
+		}
+	}
+
+	.icon{
+		margin-right: 15px;
+		@include max-screen(576px){
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+	&:nth-child(2){
+		.indicators-block__val{
+			font-size: rem(100);
+			line-height: rem(90);
+
+			@include max-screen(576px){
+				font-size: 78px;
+				line-height: 68px;
+			}  
+			@include max-screen(358px){
+				font-size: rem(100);
+				line-height: rem(90);
+
+			}
+		}
+		.icon{
+			font-size: rem(73);
+			@include max-screen(576px){
+				font-size: 55px;
+
+			}
+			@include max-screen(358px){
+				font-size: rem(73);
+				
+			}
+
+		}
+		
+	}
+	&:nth-child(3){
+		.indicators-block__val{
+			font-size: rem(70);
+			line-height: rem(60);
+			@include max-screen(576px){
+				font-size: 63px;
+				line-height: 53px;
+			}
+			@include max-screen(358px){
+				font-size: rem(70);
+				line-height: rem(60);
+			}
+		}
+		.icon{
+			font-size: rem(50);
+			@include max-screen(576px){
+				font-size: 45px;
+			}
+			@include max-screen(358px){
+				font-size: rem(50);
+
+			}
+		}
+		
+	}
+	&:nth-child(4){
+		.indicators-block__val{
+			font-size: rem(50);
+			line-height: rem(50);
+			@include max-screen(576px){
+				font-size: 50px;
+				line-height: 50px;
+			}
+			@include max-screen(358px){
+				font-size: rem(50);
+				line-height: rem(50);
+			}
+		}
+		.icon{
+			font-size: rem(35);
+			@include max-screen(576px){
+				font-size: 35px;
+			}
+			@include max-screen(358px){
+				font-size: rem(35);
+			}
+		}
+		
+	}
+
+	@include max-screen(576px){
+		margin-bottom: 20px;
+	}  	
+}
+.indicators-block__val{
+	
+			font-family: $bold;
+}

@@ -1,0 +1,87 @@
+- var list = ['AutoCAD', 'Revit', 'ARCHICAD', '3ds Max', 'Civil 3D' ];
+- var contList = ['Использование AutoCAD на 100%. Версия 2.0', '3D моделирование в AutoCAD', 'Блоки и поля в AutoCAD', 'Советы и хитрости', 'Ускорение и автоматизация в AutoCAD', 'Расчёты и спецификации в AutoCAD', 'Адаптация AutoCAD под стандарты предприятия'];
+.fullpage-menu#courses-menu
+	+icon('close')
+	.wrapper
+		.fullpage-menu__top
+			h3 ОНЛАЙН-КУРСЫ
+		.sidebar-menu__list
+
+			ul.sidebar-menu__nav
+				each item, ind in list
+					if ind == 0
+						li.sidebar-menu__item.active
+							a.sidebar-menu__link(href="#item"+(ind+1))
+								span= item
+								+icon('arrow-right')
+								+icon('chevron-down')
+
+							ul.sidebar-menu__subnav
+								each item in contList
+									li
+										a(href="#")= item
+					else
+						li.sidebar-menu__item
+							a.sidebar-menu__link(href="#item"+(ind+1))
+								span= item
+								+icon('arrow-right')
+								+icon('chevron-down')
+
+							ul.sidebar-menu__subnav.hidden
+								each item in contList
+									li
+										a(href="#")= item
+			
+			a(href="#").button.button-empty.button-std Перейти в каталог
+
+
+		each item, ind in list
+			if ind == 0
+				.fullpage-menu__content(id="item"+(ind+1))
+					ul.fullpage-menu__content-nav
+							each item in contList
+								li
+									a(href="#")= item
+
+					a(href="#").button.button-empty.button-std Все курсы по #{item}
+			
+			else
+				.fullpage-menu__content.hidden(id="item"+(ind+1))
+					ul.fullpage-menu__content-nav
+						each item in contList
+							li
+								a(href="#")= item
+
+					a(href="#").button.button-empty.button-std Все курсы по #{item}
+
+//- .fullpage-menu#articles-menu
+	+icon('close')
+	.wrapper
+		.fullpage-menu__top
+			h3 Статьи и видео
+		.sidebar-menu__list
+			- var list = ['AutoCAD', 'Revit', 'ARCHICAD', '3ds Max', 'Civil 3D' ];
+			ul.sidebar-menu__nav
+				each item, ind in list
+					if ind == 0
+						li.active
+							a(href="#")
+								span= item
+								+icon('arrow-right')
+								+icon('chevron-down')
+					else
+						li
+							a(href="#")
+								span= item
+								+icon('arrow-right')
+								+icon('chevron-down')
+			a(href="#").button.button-empty.button-std Перейти в каталог
+
+
+		.fullpage-menu__content
+			- var contListArt = ['Популярные',' Идеальный шаблон AutoCAD - какой он? Подробный разбор', '4П. Практика применения пользовательских псевдонимов в AutoCAD', 'AutoCAD 2019. Что интересного', '7 приемов ускорения черчения', '3D моделирование типовых этажей в AutoCAD'];
+			ul.fullpage-menu__content-nav
+				each item in contListArt
+					li
+						a(href="#")= item
+			a(href="#").button.button-empty.button-std Все статьи по AutoCAD

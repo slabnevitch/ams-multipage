@@ -1,0 +1,19 @@
+header.header
+	.wrapper
+		.header-inner
+			a(href="#").toggle-mnu
+				span
+			a(href="#").ams-logo
+				img(src="img/logo.svg", alt="alt")
+			
+			ul.main-menu
+				li.active
+					a(href="#" data-link="courses-menu") Все курсы 
+				//- li
+					a(href="#" data-link="articles-menu") Статьи и видео
+
+			.header-right
+				a(href="tel").main-tel 8-000-200-05-18
+					+icon('phone')
+				a(href="#enter-popup" data-tab="item2").header-account#enter-button.to-popup Войти
+					+icon('arrow-right')

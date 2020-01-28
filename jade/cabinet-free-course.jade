@@ -1,0 +1,178 @@
+extends _misc/main-with-backward
+
+block title
+	| Кабинет - бесплатный курс
+
+block content
+	section.course.ams-simple-sect
+		.wrapper
+			h2 Базовый курс по Revit
+		.wrapper.course-wrapper
+			.course-contents.bg-gray
+				.ams-scroll.scroll-pane
+					.ams-scroll__inner
+						- var list1 = [{num:'1.1', text: 'Шаблон и этапы работы'}, {num: '1.2', text: 'Интерфейс'}, {num: '1.3', text: 'Оси и уровни'}, {num: '1.4', text: 'Несущие стены'}, {num: '1.5', text: 'Многослойные стены'}];
+						
+						.course-contents__chapter
+							.course-contents__title Раздел 1. Теория
+							ul.course-contents__list
+								each item, ins in list1
+									if ins == 0
+										li.course-contents__item.active
+											a(href="#")
+												+icon('eye')
+												+icon('loc-unopened')
+												span.course-contents__num= item.num
+												span.course-contents__val= item.text
+									
+
+									if ins == 2
+										li.course-contents__item
+											a(href="#").locked
+												+icon('eye')
+												+icon('loc-unopened')
+												span.course-contents__num= item.num
+												span.course-contents__val= item.text
+									
+									else
+										li.course-contents__item
+											a(href="#")
+												+icon('eye')
+												+icon('loc-unopened')
+												span.course-contents__num= item.num
+												span.course-contents__val= item.text
+
+						- var chapters = ['Раздел 2. Практика', 'Раздел 3. Ещё практика'];
+						- var list2 = [{num:'1.1', text: 'Колонны и практическая работа'}, {num: '1.2', text: 'Стыки стен'}, {num: '1.3', text: 'Перекрытия'}, {num: '1.4', text: 'Окна, двери, витражи'}, {num: '1.5', text: 'Лестницы и шахты'}];
+						- for (var i=0; i < 2; i++)
+								each chapt in chapters
+									.course-contents__chapter
+										.course-contents__title= chapt
+										ul.course-contents__list
+											each item, ins in list2
+												if ins == 0
+													li.course-contents__item.active
+														a(href="#")
+															+icon('eye')
+															+icon('loc-unopened')
+															span.course-contents__num= item.num
+															span.course-contents__val= item.text
+			
+												if ins == 2
+													li.course-contents__item
+														a(href="#").locked
+															+icon('eye')
+															+icon('loc-unopened')
+															span.course-contents__num= item.num
+															span.course-contents__val= item.text
+												
+												else
+													li.course-contents__item
+														a(href="#")
+															+icon('eye')
+															+icon('loc-unopened')
+															span.course-contents__num= item.num
+															span.course-contents__val= item.text
+						
+										.course-contents__homework
+											a(href="#" title="Недоступен в демо-режиме и бесплатной версии курса").ams-link.to-tippy
+												+icon('Homework')
+												| Домашнее задание
+			
+			.course-information
+				.course-video
+					video#youtube1(poster="img/poster.jpg")
+						source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+
+
+					.course-video__bottom.course-block
+						a(href="#")
+							+icon('arrow-left')
+							| Предыдущий урок
+						a(href="#") Следующий урок
+							+icon('arrow-right')
+
+				.course-materials.course-block
+					h4 Вспомогательные материалы
+					p Скачайте и установите #[a(href="#") плагин] для просмотра курса
+					p Дополнительные материалы: #[a(href="#") Яндекс Диск] | #[a(href="#") Google Диск]
+					p Текстуры: #[a(href="#") Яндекс Диск] | #[a(href="#") Google Диск]
+					p Модели: #[a(href="#") Яндекс Диск] | #[a(href="#") Google Диск]
+					p HDRI: #[a(href="#") Текстуры:] | #[a(href="#") Google Диск]
+
+					p Тех. поддержка
+				
+				.course-block
+					.wrapper-wide.ams-card-wrapper
+						.course-discount-card
+							.course-discount -35%
+								p скидка на курс
+
+							.promo-date
+								span Акция закончится через:
+								.promo-date__counter
+									.promo-date__field#days
+										.promo-date__val 00
+										span дни
+
+									span /
+
+									.promo-date__field#hours
+										.promo-date__val 00
+										span часы
+
+									span /
+
+									.promo-date__field#minutes
+										.promo-date__val 00
+										span минуты
+
+									span /
+
+									.promo-date__field#seconds
+										.promo-date__val 00
+										span секунды
+							
+							a(href="#").button.button-black.button-sm Подробнее 
+
+						a(href="#").ams-card
+							.ams-card__top
+								.ams-card__kind Онлайн-курс
+								h3 Использование AutoCAD на 100% 2.0
+							.ams-card__body
+								.ams-card__text
+									.ams-card__info
+										.ams-card__block
+											+icon('lessons')
+											span 167 уроков
+										.ams-card__block
+											+icon('time')
+											span 22 часа
+
+									p Подготовка не требуется
+
+								.ams-card__img
+									img(src="img/cards/1.jpg", alt="alt")
+									+icon('arrow-right')
+													
+				.course-comments
+					script(type='text/javascript').
+						(function() {
+						var mc = document.createElement('script');
+						mc.type = 'text/javascript';
+						mc.async = true;
+						mc.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cackle.me/widget.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+						})();
+						cackle_widget = window.cackle_widget || [];
+						cackle_widget.push({
+						widget: 'Comment',
+						id: 20775
+						});
+
+block page-scripts
+	script(src='js/libs/jsscrollpane/js/jquery.mousewheel.js')
+	script(src='js/libs/jsscrollpane/js/jquery.jscrollpane.min.js')
+	script(src='js/libs/mediaelement/mediaelement-and-player.min.js')
+	script(src='js/libs/tippyjs/dist/tippy.min.js')
+	script(src='js/discount-counter.js')

@@ -1,0 +1,85 @@
+.ams_popup#enter-popup.mfp-hide
+	.ams_popup__inner.tabs
+		
+		.ams_popup__header
+				ul.tabs__list
+					li.tabs__item.tabs__item--active
+						a.tabs__link(href='#item1') Создать 
+							br
+							| личный кабинет
+					li.tabs__item
+						a.tabs__link(href='#item2') Войти
+
+		.ams_popup__body
+				ul.tabs__content
+					li#item1.tabs__item
+						.ams_popup__spheres
+							h3 Какие сферы вам интересны?
+							- var list = ['Маркетинг', 'Бизнес и менеджмент', 'Дизайн и UX', 'Программирование', 'Аналитика и данные'];
+							
+							.spheres-list
+								each item in list
+									a(href="#").button.button-empty.button-std= item
+
+							a(href="#")#form-spheres-forward.button.button-std.button-blue.hidden Далее
+						
+						form#second-step-form.hidden
+							label
+								input(type="text" placeholder="Имя")
+							label
+								input(type="text" placeholder="Электронная почта")
+							label
+								input(type="text" placeholder="+ 7 (123) 123-45-46")
+
+							.ams_popup__form-bottom
+								button.button.button-std.button-blue Создать аккаунт
+								p Нажимая кнопку, принимаю условия 
+									br
+									| политики и пользовательского 
+									br
+									| соглашения
+								h4 Создать аккаунт через соцсети
+
+								ul.ams-socials-colorised
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-VK.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-Facebook.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-Yandex.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-Mail.svg", alt="")
+
+					li#item2.tabs__item.hidden
+						form
+							label
+								input(type="text" placeholder="Электронная почта")
+							label
+								input(type="text" placeholder="Пароль")
+
+							.ams_popup__form-bottom
+								button.button.button-std.button-blue Создать аккаунт
+								p Нажимая кнопку, принимаю условия 
+									br
+									| политики и пользовательского 
+									br
+									| соглашения
+								h4 Создать аккаунт через соцсети
+
+								ul.ams-socials-colorised
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-VK.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-Facebook.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-Yandex.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons-svg/Round-Mail.svg", alt="")

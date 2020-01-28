@@ -1,0 +1,206 @@
+extends _misc/main-with-account
+
+block title
+	| Каталог
+
+block content
+	section.catalog
+		.wrapper.catalog-wrapper
+			.catalog-sidebar
+				h3 Каталог курсов
+				.sidebar-menu__list
+					- var list = [{title: 'Все направления', href: ''}, {title:'AutoCAD', href: 'autocad'}, {title:'Revit', href: 'revit'}, {title: 'ARCHICAD', href: ''}, {title: '3ds Max', href: ''}, {title: 'Civil 3D', href: ''} ];
+					ul.sidebar-menu__nav
+						each item, ind in list
+							if ind == 0
+								li.active
+									a(href="#"+item.href)
+										span= item.title
+										//- +icon('arrow-right')
+							else
+								li
+									a(href="#"+item.href)
+										span= item.title
+										//- +icon('arrow-right')
+				.ams-checks
+					label
+						input(type="checkbox", name="" checked)
+						span.custom-checkbox
+						span.custom-checkbox-label платные
+					label
+						input(type="checkbox", name="")
+						span.custom-checkbox
+						span.custom-checkbox-label бесплатные
+			
+			.catalog-content.bg-gray
+				h2 Популярные
+					- var popular = ['Информационное моделирование в Revit', 'Использование AutoCAD на 100% 2.0', 'Использование ARCHICAD на 100%'];
+				.wrapper-wide.ams-card-wrapper
+		
+					each card, ind in popular
+						a(href="#").ams-card
+							.ams-card__top
+								.ams-card__kind Онлайн-курс
+								h3= card
+							.ams-card__body
+								.ams-card__text
+									.ams-card__info
+										.ams-card__block
+											+icon('lessons')
+											span 167 уроков
+										.ams-card__block
+											+icon('time')
+											span 22 часа
+
+									p Подготовка не требуется
+
+								.ams-card__img
+									img(src="img/cards/"+(ind+1)+".jpg", alt="alt")
+									+icon('arrow-right')
+
+					a(href="#").ams-card
+						.ams-card__top
+							.ams-card__kind Онлайн-курс
+							h3 3ds Max.Визуализация
+						.ams-card__body
+							.ams-card__text
+								.ams-card__info
+									//- .ams-card__block
+									//- 	+icon('lessons')
+									//- 	span 167 уроков
+									//- .ams-card__block
+									//- 	+icon('time')
+									//- 	span 22 часа
+
+								p.ams-card__mini
+									| #[strong Вы остановились на уроке:] 3.1 Параметры печати и настройка пакетной публикации
+
+							.ams-card__img
+								img(src="img/cards/4.jpg", alt="alt")
+								+icon('arrow-right')
+				
+				h2(id="autocad") Курсы AutoCAD
+				.wrapper-wide.ams-card-wrapper
+		
+					each card, ind in popular
+						a(href="#").ams-card
+							.ams-card__top
+								.ams-card__kind Онлайн-курс
+								h3= card
+							.ams-card__body
+								.ams-card__text
+									.ams-card__info
+										.ams-card__block
+											+icon('lessons')
+											span 167 уроков
+										.ams-card__block
+											+icon('time')
+											span 22 часа
+
+									p Подготовка не требуется
+
+								.ams-card__img
+									img(src="img/cards/"+(ind+1)+".jpg", alt="alt")
+									+icon('arrow-right')
+			
+					a(href="#").ams-card
+						.ams-card__top
+							.ams-card__kind Онлайн-курс
+							h3 3ds Max.Визуализация
+						.ams-card__body
+							.ams-card__text
+								.ams-card__info
+									//- .ams-card__block
+									//- 	+icon('lessons')
+									//- 	span 167 уроков
+									//- .ams-card__block
+									//- 	+icon('time')
+									//- 	span 22 часа
+
+								p.ams-card__mini
+									| #[strong Вы остановились на уроке:] 3.1 Параметры печати и настройка пакетной публикации
+
+							.ams-card__img
+								img(src="img/cards/4.jpg", alt="alt")
+								+icon('arrow-right')
+			
+					- var wides = [{title: 'AutoCAD для начинающих', kind: 'Базовый курс', classname: 'base'}, {title: '10 ошибок начинающих пользователей AutoCAD', kind: 'Мастер-класс', classname: 'master-class'}, {title:'Динамические блоки в AutoCAD', kind: 'Вебинар', classname: 'webinar'}];
+					each item, ind in wides
+						a(href="#" class="ams-card ams-card--wide "+item.classname)
+							.ams-card__img
+									img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
+									+icon('arrow-right')
+							
+							.ams-card__body
+								.ams-card__header
+									.ams-card__kind= item.kind
+									.ams-card__tarif Бесплатно
+
+								h3= item.title
+							
+								.ams-card__bottom
+									.ams-card__volume 4 урока
+									.ams-card__expr Подготовка не требуется
+
+				h2(id="revit") Курсы Revit
+				.wrapper-wide.ams-card-wrapper
+		
+					each card, ind in popular
+						a(href="#").ams-card
+							.ams-card__top
+								.ams-card__kind Онлайн-курс
+								h3= card
+							.ams-card__body
+								.ams-card__text
+									.ams-card__info
+										.ams-card__block
+											+icon('lessons')
+											span 167 уроков
+										.ams-card__block
+											+icon('time')
+											span 22 часа
+
+									p Подготовка не требуется
+
+								.ams-card__img
+									img(src="img/cards/"+(ind+1)+".jpg", alt="alt")
+									+icon('arrow-right')
+			
+					a(href="#").ams-card
+						.ams-card__top
+							.ams-card__kind Онлайн-курс
+							h3 3ds Max.Визуализация
+						.ams-card__body
+							.ams-card__text
+								.ams-card__info
+									//- .ams-card__block
+									//- 	+icon('lessons')
+									//- 	span 167 уроков
+									//- .ams-card__block
+									//- 	+icon('time')
+									//- 	span 22 часа
+
+								p.ams-card__mini
+									| #[strong Вы остановились на уроке:] 3.1 Параметры печати и настройка пакетной публикации
+
+							.ams-card__img
+								img(src="img/cards/4.jpg", alt="alt")
+								+icon('arrow-right')
+			
+					- var wides = [{title: 'AutoCAD для начинающих', kind: 'Базовый курс', classname: 'base'}, {title: '10 ошибок начинающих пользователей AutoCAD', kind: 'Мастер-класс', classname: 'master-class'}, {title:'Динамические блоки в AutoCAD', kind: 'Вебинар', classname: 'webinar'}];
+					each item, ind in wides
+						a(href="#" class="ams-card ams-card--wide "+item.classname)
+							.ams-card__img
+									img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
+									+icon('arrow-right')
+							
+							.ams-card__body
+								.ams-card__header
+									.ams-card__kind= item.kind
+									.ams-card__tarif Бесплатно
+
+								h3= item.title
+							
+								.ams-card__bottom
+									.ams-card__volume 4 урока
+									.ams-card__expr Подготовка не требуется

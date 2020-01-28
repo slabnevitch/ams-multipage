@@ -1,0 +1,254 @@
+/*---header---*/
+.header{
+	padding-top: rem(45);
+	margin-bottom: rem(45);
+
+	&-inner{
+		@include col();
+		@include size(12);
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+
+		.toggle-mnu{
+			flex-shrink: 0;	
+		}
+
+		@include max-screen(480px){
+			justify-content: space-between;
+		}
+		.ams-logo{
+			@include max-screen(960px){
+				margin-right: 30px;
+			}
+		}
+	}
+
+}
+.ams-logo{
+	display: block;
+	max-width: 185px;
+	margin-right: 115px;
+
+	img{
+		max-width: 100%;
+	}
+	@include max-screen(1100px){
+		margin-right: 90px;
+	}
+	@include max-screen(480px){
+		max-width: 130px;
+		margin-right: 0;
+	}
+}
+.header-right{
+	margin-left: auto;
+
+	.main-tel{
+		@include max-screen(768px){
+			display: none;
+		}
+	}
+	@include max-screen(480px){
+		display: none;
+	}
+}
+.main-tel{
+	position: relative;
+	
+	font-size: 22px;
+	color: $accent;
+	font-family: $bold;
+	text-decoration: none;
+
+	// &:before{
+	// 	content: '';
+		// position: absolute;
+		// top: 50%;
+		// left: -20px;
+		// margin-top: -8px;
+	// 	width: 7px;
+	// 	height: 16px;
+	// 	background-image: url(../img/icons-svg/phone.svg);
+	// 	@extend .svg-icon;
+	// }
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: -16px;
+		margin-top: -8px;
+		font-size: 16px;
+	}
+
+}
+.header-backward{
+	display: block;
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: -35px;
+		margin-top: -8px;
+		font-size: 16px;
+	}
+	@include max-screen(960px){
+		margin-left: 30px;	
+	}
+	@include max-screen(576px){
+		margin-left: 0;
+		font-size: 12px;
+		padding: 5px 10px;	
+
+		.icon{
+			left: -25px;
+		}
+	}
+
+}
+.main-menu{
+	li{
+		margin-right: 42px;
+		list-style-type: none;
+		display: inline-block;
+		vertical-align: middle;
+		a{
+			@extend .button;
+			font-size: 15px;
+			text-transform: uppercase;
+			color: $text;
+			background-color: transparent;
+			font-family: $bold;
+			text-decoration: none;
+
+			&:hover{
+				color: #fff;
+			}
+		}
+
+		&.active{
+			a{
+			}
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+	}
+}
+.header-right{
+	a{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.header-account{
+	position: relative;
+	text-transform: uppercase;
+	font-family: $bold;
+	margin-left: 69px;
+	line-height: 15px;
+	color: $text;
+	text-decoration: none;
+
+	// &:before{
+	// 	content: '';
+	// 	@extend .svg-icon;
+	// 	position: absolute;
+	// 	left: -32px;
+	// 	top: 50%;
+	// 	transform: translateY(-50%);
+	// 	width: 16px;
+	// 	height: 16px;
+	// 	background-image: url(../img/icons-svg/arrow-left.svg);
+	// }
+
+	.icon{
+			position: absolute;
+		left: -25px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 16px;
+	}
+
+}
+.ams-account{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 50px;
+	.ams-userpic,
+	.ams-dropdown{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.ams-userpic{
+		margin-right: 8px;
+	}
+	&__username{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 130px;
+		// padding-right: 18px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		font-size: 13px;
+		cursor: pointer;
+		user-select: none;
+
+		.icon{
+			position: relative;
+			@include absolute-center;
+			left: auto;
+			right: -3px;
+
+			// margin-left: 5px;
+			// vertical-align: middle;
+			font-size: 5px;
+			color: $light-text;
+		}
+	}
+	&__dropdown{
+		display: none;
+		padding: 12px 0;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 103%;
+		background-color: #fff;
+		box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+		border-radius: 5px;
+		z-index: 99;
+		li{
+			list-style-type: none;
+			margin-bottom: 3px;
+			a{
+				display: block;
+				padding: 0 17px;
+				font-size: 13px;
+				color: $text;
+				text-decoration: none;
+
+				&:hover{
+					background-color: $accent;
+					color: #fff;
+					font-family: $bold;
+				}
+				
+			}
+		}
+	}
+	&.open{
+		.ams-account__dropdown{
+			display: block;
+		}
+	}
+	@include max-screen(768px){
+		display: none;
+	}
+}
+/*---end header---*/

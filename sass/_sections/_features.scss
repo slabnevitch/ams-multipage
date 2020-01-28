@@ -1,0 +1,32 @@
+.features{
+	padding-top: 35px;
+}
+.features-item{
+	margin-bottom: rem(56);
+	@include col();
+	@include size(4);
+	@include size-mdd(6);
+	@include size-xs(12);
+	&__img{
+		width: 120px;
+		height: 103px;
+		margin-bottom: 28px;
+		position: relative;
+
+		img{
+			@include absolute-center;
+		}
+		@include max-screen(576px){
+			margin-bottom: 28px;
+		}  
+	}
+	p{
+		margin-top: 5px;
+		margin-bottom: 0;
+		font-size: 16px;
+		line-height: 140%;
+	}
+	@include max-screen(576px){
+		margin-bottom: 30px;
+	}  
+}

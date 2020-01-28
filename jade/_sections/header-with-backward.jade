@@ -1,0 +1,22 @@
+header.header
+	.wrapper
+		.header-inner
+			a(href="#").ams-logo
+				img(src="img/logo.svg", alt="alt")
+			
+			a(href="#").header-backward.button.button-empty мои курсы
+				+icon('arrow-left')
+
+			.header-right
+				.ams-account
+					.ams-userpic
+						img(src="img/sting.jpg", alt="alt")
+					.ams-account__username
+						span Константинович
+						//- span Константинович-пидарастинович
+						+icon('triangle')
+					- var opts = ['Мои курсы', 'Настройка профиля', 'Выход'];
+					ul.ams-account__dropdown
+						each opt in opts
+							li
+								a(href="#")= opt

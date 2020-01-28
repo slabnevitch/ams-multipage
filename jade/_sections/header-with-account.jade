@@ -1,0 +1,32 @@
+header.header
+	.wrapper
+		.header-inner
+			a(href="#").toggle-mnu
+				span
+			a(href="#").ams-logo
+				img(src="img/logo.svg", alt="alt")
+			
+			ul.main-menu
+				li.active
+					a(href="#" data-link="courses-menu") Все курсы 
+				//- li
+					a(href="#" data-link="articles-menu") Статьи и видео
+
+			.header-right
+				a(href="tel").main-tel 8-000-200-05-18
+					+icon('phone')
+				.ams-account
+					.ams-userpic
+						img(src="img/sting.jpg", alt="alt")
+					.ams-account__username
+						span Константинович
+						//- span Константинович-пидарастинович
+						+icon('triangle')
+					- var opts = ['Мои курсы', 'Настройка профиля', 'Выход'];
+					ul.ams-account__dropdown
+						each opt in opts
+							li
+								a(href="#")= opt
+						
+					//- .ams-dropdown
+					//- 	select(name="")

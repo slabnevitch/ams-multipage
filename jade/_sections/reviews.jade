@@ -1,0 +1,55 @@
+section.reviews.bg-gray.with-heading
+	.wrapper
+		.heading
+			h2 Что говорят студенты о наших курсах 
+			.ams-slider-nav
+				.ams-slider-prev
+				.ams-slider-next
+	.wrapper-no-fl
+		.reviews-slide
+			.reviews-slide__left
+				.reviews-slide__img
+					img(src="img/review-user.jpg", alt="alt")
+
+				.reviews-slide__user
+					.reviews-slide__user-data
+						h4 Василий Иванов
+						p главный инженер
+					.reviews-slide__user-soc
+						ul.ams-socials.ams-socials-std
+							li
+								a(href="#")
+									+icon('fb')
+
+			.reviews-slide__right
+				h3 Тема: «Экзистенциальный психоанализ: 
+					br 
+					| предпосылки и развитие
+
+				p Роль притягивает эскапизм. Автоматизм неустойчив. Парадигма вызывает конфликтный ассоцианизм, что отмечают такие крупнейшие ученые как Фрейд, Адлер, Юнг, Эриксон, Фромм. Связь последовательно выбирает сексуальный онтогенез речи. Этот концепт элиминирует концепт «нормального», однако психоз интегрирует ускоряющийся интеллект.
+
+				p  Воспитание дает ассоцианизм. Структурный голод столь же важен для жизни, как и душа вероятна. Интеллект семантически просветляет стресс, таким образом осуществляется своего рода связь с темнотой бессознательного.
+
+				.reviews-slide__footer
+					.reviews-slide__column
+						h4 Прошёл курсы:
+						a(href="#") Информационное моделирование в Revit
+						a(href="#") Использование AutoCAD на 100%
+
+					.reviews-slide__column
+						a(href="#") Информационное моделирование в Revit
+						a(href="#") Использование AutoCAD на 100%
+
+	.wrapper-no-fl
+		ul.slider-dots
+			- for (var i=0; i < 4; i++)
+				if i == 0
+					li.active
+						a(href="#")
+				else
+					li
+						a(href="#")
+
+	.wrapper-no-fl
+		.button-wrapper
+			a(href="#").button.button-lg Показать ещё отзывы

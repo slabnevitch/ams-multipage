@@ -1,0 +1,74 @@
+.ams_popup{
+	position: relative;
+	padding: 30px 30px 0 30px;
+	max-width:  470px;
+	margin: 0 auto;
+
+	&__inner{
+		border-radius: 5px;
+		background-color: $gray-bg;
+
+		.tabs__list{
+			display: table;
+			width: 100%;
+			border-bottom: 2px solid #fff;
+			font-size: 0;
+			.tabs__item{
+				width: 50%;
+				list-style-type: none;
+				display: table-cell;
+				vertical-align: middle;
+				.tabs__link{
+					display: block;
+					padding: 27px;
+					font-size: 15px;
+					line-height: 18px;
+					font-family: $bold;
+					color: $light-text;
+					text-decoration: none;
+					text-align: center;
+				}
+				&:first-child{
+					border-right: 2px solid #fff;
+				}
+
+				&--active{
+					.tabs__link{
+						color: $blue;
+					}
+				}
+			}
+			
+		}
+		
+
+	}
+}
+.ams_popup__body{
+
+	padding: rem(40) rem(50) rem(53) rem(50);
+}
+.ams_popup__spheres{
+	text-align: center;
+	h3{
+		margin-bottom: 30px;
+	}
+	.button{
+		margin-top: 20px;
+	}
+}
+.spheres-list{
+	
+	.button{
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 10px;
+
+		&.sphere-selected{
+			border-color: $blue;
+			color: $blue;
+			// @extend .button-std;
+			// @extend .button-blue;
+		}
+	}
+}

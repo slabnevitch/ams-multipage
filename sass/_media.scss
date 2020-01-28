@@ -1,0 +1,199 @@
+/*==========  Desktop First Method  ==========*/
+
+ 
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px){
+ html{
+ 	font-size: 14px;
+ }
+}
+	
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1100px){
+	.header-logo{
+		margin-right: 50px;
+	}
+	.header-menu li {
+		margin-right: 44px;
+	}
+}
+@media only screen and (max-width : 992px){
+	html{
+		font-size: 12px;
+	}
+	.to-comment{
+		display: block;
+	}
+	.comments-container{
+		margin-top: 52px;
+	}
+	
+	.ams-text-block__bottom{
+		display: block;
+	}
+}
+	
+@media only screen and (max-width : 960px){
+	.header .main-menu
+	{
+		display: none;
+	}
+}
+	
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+	html{
+		font-size: 11px;
+	}
+
+	.header{
+		padding-top: 15px;
+	}
+	.header-logo{
+		margin-right: 10px;
+	}
+	.ams-video-bottom__registered span.registered-hidden-mob{
+		display: none;
+	}
+	.ams-video-bottom__share{
+		order: 2;
+		width: 100%;
+	}
+	/*Disable Animation on Mobile Devices*/
+// 	.animated{
+
+// 		/*CSS transitions*/
+// 		-o-transition-property: none !important;
+// 		-moz-transition-property: none !important;
+// 		-ms-transition-property: none !important;
+// 		-webkit-transition-property: none !important;
+// 		transition-property: none !important;
+// 		/*CSS transforms*/
+// 		-o-transform: none !important;
+// 		-moz-transform: none !important;
+// 		-ms-transform: none !important;
+// 		-webkit-transform: none !important;
+// 		transform: none !important;
+// 		/*CSS animations*/
+// 		-webkit-animation: none !important;
+// 		-moz-animation: none !important;
+// 		-o-animation: none !important;
+// 		-ms-animation: none !important;
+// 		animation: none !important;
+// 	}
+}
+
+
+	
+	
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px){
+	html{
+		font-size: 9px;
+	}
+
+	.sidebar-menu__nav li.active a .icon-arrow-right{
+		display: none;
+	}
+	.sidebar-menu__nav li a .icon-chevron-down{
+		display: inline;
+	}
+
+
+
+
+	.ams-video-bottom{
+		margin-bottom: 5px;
+	}
+	.ams-video-bottom__date{
+		margin-right: 10px;
+	}
+	.ams-left{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+
+		&__top{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.ams-text-block{
+		padding: 30px 15px 37px 15px;
+	}
+	.ams-popup{
+		max-width: 375px;	
+		padding: 66px 43px 85px 42px;
+
+		h4{
+			padding: 	0 15px;
+			text-align: center;		
+			font-size: 22px;
+				line-height: 27px;
+			br{
+				display: block;	
+			}
+		}
+		.ams-socials-colorised li{
+			margin: 	0 9px;
+		}
+	}
+}
+@media only screen and (max-width : 480px){
+	html{
+		font-size: 7px;
+	}
+}
+		
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px){
+
+		.header-logo{
+			max-width: 150px;
+		}
+		h2{
+			font-size: 25px;
+		}
+		.ams-video-bottom{
+			flex-direction: column;
+			align-items: flex-start;
+		}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px){
+	/**/
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px){
+	/**/
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px){
+	/**/
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px){
+	/**/
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px){
+	/**/
+}
+
+
+

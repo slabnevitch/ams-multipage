@@ -1,0 +1,161 @@
+extends _misc/main
+
+block title
+	| Материал
+
+block content
+	.wrapper
+		- var crumbs = ['Главная', 'Уроки AutoCAD', 'Идеальный шаблон AutoCAD - какой он? Подробный разбор'];
+		ul.ams-breadcrumbs.ams-breadcrumbs--slash
+			each item in crumbs
+				li
+					a(href="#")= item
+
+	
+	.ams-banner.ams-banner--material
+		.ams-banner__img
+			img(src="img/material/banner.jpg", alt="alt")
+		.wrapper
+			.ams-banner__text
+				.ams-banner__block
+					h1 Идеальный шаблон AutoCAD - 
+						br 
+						| какой он? Подробный разбор
+					
+					.ams-tile__bottom
+						.ams-tile__date 27.09.2018 г
+						.ams-tile__views
+							+icon('eye')
+							span 27.09.2018 г
+	
+	sect.material
+		.wrapper.mat-jce
+			.material-soc.material-soc--toped
+				.material-soc__icons
+					- var icons = ['fb', 'vk', 'yt', 'tg', 'mail', 'ya', 'tw'];
+					ul
+						each icon in icons
+							li
+								a(href="#")
+									div(class="ico-"+icon)
+			.material-content
+				article
+					h2 Предисловие
+					
+					p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон». Этим я хочу облегчить задачу новым пользователям AutoCAD, так как цель данной статьи показать общие возможности программы в направлении стандартизации проектирования и минимизации рутинных процессов, а не просто рассказать о файле формата DWT.
+
+					h2 Предисловие по другому
+
+					p В статье я не делаю попытки детально осветить все аспекты создания шаблона, так как для этого потребуется написать целую книгу )) Тут я, всего лишь, сделал попытку систематизировать процесс наполнения шаблона и привести ряд практических советов по созданию удобной пользовательской среды.
+
+					figure
+						img(src="img/material/image1.jpg", alt="alt")
+						figcaption Создание текстового стиля
+
+					p Главное, что следует понять - любой новый файл AutoCAD, создается на основе какого-либо шаблона.
+					p Есть 4 способа создания файла (см. скриншот ниже):
+					
+					-var list = ['Меню быстрого доступа – БСОЗДАТЬ', 'Меню приложения – Создать (Ctrl+N)', 'Кнопка работы с чертежом', 'Кнопка шаблоны'];
+					ol
+						each item in list
+							li= item
+
+					figure
+						img(src="img/material/image2.jpg", alt="alt")
+						figcaption Создание текстового стиля
+
+					p Главное, что следует понять - любой новый файл AutoCAD, создается на основе какого-либо шаблона.
+					p Есть 4 способа создания файла (см. скриншот ниже):
+
+					ul
+						each item in list
+							li= item
+
+					blockquote
+						h3 Примечание
+						p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон».
+
+					h2 Системные переменные и их показатели
+
+					-var ths = ['Наименование', 'Обозначение', 'Действие'];
+					-var tds1 = ['Срок', 'Деятельность', 'Имение'];
+					-var tds2 = ['Музыка', 'Переменная', 'Показатель'];
+					-var tds3 = ['Производство', 'Обозначение', 'Значение'];
+
+					table
+						thead
+							tr
+								each item in ths
+									th= item
+
+						tbody
+							tr
+								each item in tds1
+									td= item
+
+							- for (var i=0; i < 6; i++)
+								if i & 1
+									tr
+										each item in tds3
+											td= item
+								else
+									tr
+										each item in tds2
+											td= item
+					
+					p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон». Этим я хочу облегчить задачу новым пользователям AutoCAD, так как цель данной статьи показать общие возможности программы в направлении стандартизации проектирования и минимизации рутинных процессов, а не просто рассказать о файле формата DWT.
+
+					video(poster="img/poster.jpg")
+						source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+
+					blockquote
+						h3 P.S.
+						p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон».
+			
+				- var tags = ['шаблоны', 'стили', 'маркеры', 'полилиния'];
+				ul.ams-tags
+					each tag in tags
+						li
+							a(href="#")= tag
+
+			.material-sidebar.material-sidebar--padded
+				.material-sidebar__inner
+					.material-banner.material-banner--autocad
+						.material-banner__top(style="background-image: url(img/material/banners/autocad-img.jpg)")
+							.material-banner__logo
+								img(src="img/material/banners/autocad.png", alt="alt")
+						.material-banner__body
+							.material-banner__title 10 ошибок новичков и методы их решений
+							p + бесплатный PDF-отчет от Алексея Меркулова
+
+							.material-banner__bottom
+								a(href="#").material-banner__button
+									+icon('arrow-right')
+									| Получить
+
+	section.knowledge.bg-gray
+		.wrapper.mat-jce
+			.knowledge-inner
+				.knowledge-title Что еще изучить
+				ol
+					li
+						a(href="#") Как сделать кнопку в Автокад для LISP-приложения
+					li
+						a(href="#") Как сделать аксонометрию в Автокаде?
+
+				.knowledge-title Курсы
+				-var list = ['Использование AutoCAD на 100%', '3D моделирование в AutoCAD', 'Адаптация AutoCAD под стандарты предприятия', 'Советы и хитрости Блоки и поля в AutoCAD'];
+				ol
+					each item in list
+						li
+							a(href="#")=item
+
+	section.mat-pub
+		.wrapper.mat-jce
+			p Хотите опубликовать свою статью? Читайте #[a(href="#") условия публикации.]
+		
+
+block page-scripts
+	script(src='js/libs/mediaelement/mediaelement-and-player.min.js')
+	script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+	script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")

@@ -1,0 +1,286 @@
+.course-wrapper{
+	align-items: flex-start;
+}
+.course-contents{
+	@include col();
+	@include size(4);
+}
+.course-information{
+	@include col();
+	@include size(8);
+
+}
+.ams-scroll{
+	max-height: 900px;
+}
+.ams-scroll__inner{
+	padding: 30px;
+
+}
+.course-contents__chapter{
+	margin-bottom: 30px;
+
+}
+.course-contents__title{
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-family: $bold;
+}
+
+.course-contents__list{
+	padding-left: 10px;
+}
+.course-contents__item{
+	margin-bottom: 15px;
+	list-style-type: none;
+	font-size: 15px;
+	a{
+		position: relative;
+		display: block;
+		color: $text;
+		text-decoration: none;
+		// @include clearfix;
+		
+		.icon{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: -30px;
+			font-size: 17px;
+		}
+		.course-contents__num{
+			position: absolute;
+			width: 24px;
+			left: -7px;
+			text-align: right;
+			// margin-right: 19px;
+			color: $light-text;
+		}
+		.course-contents__val{
+			display: block;
+			margin-left: 34px;
+		}
+		&.watched{
+			
+		}
+		&.locked{
+			.icon-loc-unopened{
+				display: block;
+			}
+		}
+	}
+	&.active{
+		a{
+			.course-contents__val{
+				
+				font-family: $bold;
+			}
+		}
+	}
+	&.visited{
+		a{
+			.icon-eye{
+				display: block;
+			}
+			.icon-loc-unopened{
+				display: none;
+			}
+			
+		}
+	}
+
+	// &:last-child{
+	// 	margin-bottom: 0;
+	// }
+
+}
+.course-contents__homework{
+	margin-bottom: 15px;
+	padding-left: 10px;
+	.ams-link{
+		font-size: 16px;
+		text-decoration: none;
+	}
+	.icon{
+		font-size: 16px;
+		margin-right: 19px;
+		// vertical-align: middle;
+	}
+	
+}
+.jspVerticalBar{
+	right: 0;
+	left: auto;
+}
+.jspPane{
+	margin-left: 0 !important;
+	margin-right: 20px;
+}
+.jspTrack{
+	background-color: #EEF2F5;
+}
+.jspDrag{
+	background-color: #C2CBD4;
+}
+.course-video__bottom{
+	text-align: right;
+	font-size: 15px;
+	font-family: $bold;
+
+	a{
+		text-transform: uppercase;
+		color: $text;
+		text-decoration: none;	
+			vertical-align: middle;
+
+		&:first-child{
+			margin-right: 45px;
+			color: $light-text;
+
+			.icon{
+				margin-right: 13px;	
+			}
+		
+		}
+		&:last-child{
+			.icon{
+				margin-left: 13px;	
+			}
+		}
+		.icon{
+			vertical-align: middle;
+			// display: inline-block;
+			font-size: 16px;	
+		}
+	}
+}
+.mejs__overlay-button{
+	width: 60px;
+	height: 60px;
+	background-image: url(../img/icons-svg/Play.svg);
+	background-position: 0 0;
+}
+.course-block{
+
+	// border-top: 1px solid $light-text;
+	border-bottom: 1px solid $light-text;
+	padding: 30px 0;
+
+	.ams-card-wrapper{
+		margin-left: 0;
+		margin-right: 0;
+		background-color:  #FFC700	;
+		border-radius: 5px;	
+		.ams-card,
+		.course-discount-card{
+			width: 50%;
+			margin: 0;
+		}
+		.course-discount-card{
+			padding: 10px 0 23px 32px;
+			border-radius: 5px;	
+			
+			.button{
+				min-width: 168px;
+			}
+		}
+		.ams-card{
+			background-color: $gray-bg;
+		}
+
+	}
+}
+.course-discount{
+	font-size: 70px;
+line-height: 58px;
+font-family: $black;
+	p{
+				font-size: 15px;
+				line-height: 18px;
+				margin-top: 0;
+				font-family: $bold;
+				text-transform: uppercase;
+			}
+}
+.course-materials{
+
+	h4{
+		margin-bottom: 12px;
+	}
+
+	p{
+		margin-top: 0;
+		margin-bottom: 3px;
+		font-size: 13px;
+		a{
+			color: $text;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+	}
+}
+.promo-date{
+	margin-top: 12px;
+	margin-bottom: 8px;
+	color: #fff;
+	& > span{
+		display: block;
+		margin-bottom: 4px;
+		font-size: 15px;
+		font-family: $bold;
+	}
+}
+.promo-date__counter{
+	display: inline-block;
+	// margin-left: 30px;
+	vertical-align: middle;
+
+	& > span{
+		margin-left: 5px;
+		font-size: 26px;
+	// line-height: 32px;
+	
+	vertical-align: top;
+	}
+}
+.promo-date__field{
+	width: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+
+	span{
+		display: inline-block;
+		// margin-top: -15px;
+		// margin-left: 10px;
+		// margin-right: 10px;
+		font-size: 12px;
+		line-height: 12px;
+		font-family: $reg;
+	}
+}
+.promo-date__val{
+	font-size: 26px;
+	// line-height: 32px;
+	
+	font-family: $bold;
+}
+
+.tippy-tooltip{
+	max-width: 230px;
+	padding-left: 17px;
+	padding-right: 17px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #fff;
+}
+.tippy-tooltip[data-animatefill]{
+	background-color: #A0ACB8 !important;
+
+}
+.tippy-tooltip [x-circle]{
+	background-color: transparent;
+}

@@ -1,0 +1,51 @@
+section.programs.ams-std-sect.bg-gray
+	.wrapper
+		h2 20+ программ обучения
+		- var navs = ['Revit', 'AutoCAD', 'ARCHICAD', '3ds Max'];
+		.programs-nav-container
+
+			ul.programs-nav
+				li Популярные
+				each nav, index in navs
+					li
+						a(href="#")= nav
+
+	.wrapper.ams-card-wrapper
+		- var cards = ['Использование AutoCAD на 100% 2.0', 'Информационное моделирование в Revit', 'Использование ARCHICAD на 100%', '3ds Max.Визуализация', 'Конструкции железобетонные в Revit'];
+		
+		each card, ind in cards
+			a(href="#").ams-card
+				.ams-card__top
+					.ams-card__kind Онлайн-курс
+					h3= card
+				.ams-card__body
+					.ams-card__text
+						.ams-card__info
+							.ams-card__block
+								+icon('lessons')
+								span 167 уроков
+							.ams-card__block
+								+icon('time')
+								span 22 часа
+
+						p Подготовка не требуется
+
+					.ams-card__img
+						img(src="img/cards/"+(ind+1)+".jpg", alt="alt")
+						+icon('arrow-right')
+
+		a(href="#").ams-card.ams-card--template
+			.ams-card__top
+				h3 Все курсы
+			.ams-card__body
+				.ams-card__text
+					.ams-card__info
+						.ams-card__block
+							+icon('lessons')
+							span 2500+ уроков
+						.ams-card__block
+							+icon('time')
+							span 500+ часов
+
+				.ams-card__img
+					+icon('arrow-right')

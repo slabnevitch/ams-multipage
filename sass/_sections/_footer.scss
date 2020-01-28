@@ -1,0 +1,174 @@
+.footer {
+	padding-top: rem(62);
+	padding-bottom: rem(155);
+	p{
+		margin-top: 0;
+		font-size: 13px;
+		color: #656F78;
+
+		a{
+			// font-family: $med;
+		color: #656F78;
+		}
+	}
+	.ams-logo,
+	.ams-socials{
+		margin-bottom: 40px;
+		@include max-screen(960px){
+			margin-bottom: 17px;
+		}
+	}
+	@include max-screen(960px){
+		padding-bottom: 65px;
+	}
+}
+.footer-left{
+	@include col();
+	@include size(3);
+	@include size-mdd(6);
+	@include size-sm(6);
+	@include size-xxs(12);
+
+	.ams-logo{
+		margin-right: 0;
+		@include max-screen(480px){
+			margin-bottom: 0;
+			max-width: 130px;
+		}
+	}
+
+	.button{
+		display: none;
+
+		@include max-screen(480px){
+			display: inline-block;
+			margin-left: auto;
+		}
+	}
+	p{
+		@include max-screen(480px){
+			display: none;
+		}
+		
+	}
+	@include max-screen(480px){
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		margin-bottom: 27px;
+	}
+
+}
+.footer-middle{
+	@include col();
+	@include size(5);
+	@include size-mdr(6);
+	@include size-mdd(12);
+	// @include size-sm(12);
+	&__top{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 35px;
+
+		.ams-phone-block{
+			margin-left: 95px;
+			p{
+				margin-bottom: 0;
+				margin-left: -15px;
+			}
+			@include max-screen(1100px){
+				margin-left: 30px;
+			}
+			@include max-screen(480px){
+				margin-left: 15px;
+			}
+		}
+		@include max-screen(960px){
+			margin-bottom: 15px;
+		}
+	}
+	.main-menu{
+		li{
+			a{
+				@extend .button;
+			}
+		}
+
+		@include max-screen(480px){
+			display: none;
+		}
+	}
+	p{
+		@include max-screen(480px){
+			display: none;
+		}
+	}
+	@include max-screen(960px){
+		order: 1;
+		margin-top: 17px;
+	}
+	@include max-screen(480px){
+		order: 0;
+		margin-top: 0;
+	}
+}
+.footer-right{
+	@include col();
+	@include size(4);
+	@include size-mdr(3);
+	@include size-mdd(6);
+	@include size-sm(6);
+	@include size-xxs(12);
+	padding-left: rem(70);
+
+	p{
+		a{
+			display: block;
+		}
+	}
+	@include max-screen(992px){
+		padding-left: 0;
+	
+	}
+
+	&__mob-text{
+		display: none;
+		@include max-screen(480px){
+			display: block;
+		}
+	}
+	
+	.ams-socials{
+		margin-top: 11px;
+		li{
+			a{
+				color: $ams-link;
+				font-family: $med;
+				.icon{
+					color: $accent;
+					font-size: 15px;
+					@include max-screen(480px){
+						font-size: 30px;
+						margin-right: 20px;
+					}
+					@include max-screen(320px){
+						font-size: 22px;
+					}
+				}
+			}
+
+			@include max-screen(480px){
+				margin: 0;
+
+			}
+		}
+
+	}
+}

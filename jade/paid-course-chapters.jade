@@ -1,0 +1,99 @@
+extends _misc/main-with-account
+
+block title
+	| Платный курс. Разделы
+
+block content
+	section
+		.wrapper
+			.paid-chapters__top
+				h1 Использование AutoCAD 
+					br
+					| на 100% 2.0
+				ul.paid-chapters-top__info
+					
+					li
+						+icon('lessons')
+						| 167 уроков
+
+					li
+						+icon('Homework')
+						| 32 домашних заданий
+
+					li
+						+icon('time')
+						| 22 часа
+	
+	section.paid-chapters
+		.wrapper
+			.heading
+				h2 Разделы
+				a(href="#").ams-link
+					| Свернуть разделы
+					+icon('chevron-up')
+
+			ul.acordeon-list.paid-chapters__items
+				- for (var i=0; i < 3; i++)
+					li.acordeon-item.paid-chapters-item.acordeon-item-with-sublist
+						.paid-chapters__link.bg-gray(href="#")
+							.paid-chapters-item__left
+								.paid-chapters-item__num= (i+1)
+								.paid-chapters-item__body
+									.paid-chapters-item__kind Модуль
+									h3 Знакомство с интерфейсом. 
+										br
+										| Создание примитивных объектов
+									.paid-chapters-item__bottom
+										span 3 урока
+										span 1 домашнее задание
+							
+							.paid-chapters-item__right
+								.paid-chapters-item__icon-block
+									+icon('lock-open')
+								.paid-chapters-item__icon-block
+									+icon('eye')
+								.paid-chapters-item__icon-block
+									a.acordeon-link(href="#")
+										+icon('chevron-down')
+						
+						ul.acordeon-sublist.paid-chapters__sublist.bg-gray
+							
+							li.acordeon-subitem.paid-chapters__subitem
+								- var list1 = [{num:'1.1', text: 'Как проходить курс'}, {num: '1.2', text: 'Как проходить курс'}, {num: '1.3', text: 'Организация курса'}];
+							
+								.course-contents__chapter
+									ul.course-contents__list
+										each item, ins in list1
+											if ins == 0 
+												li.course-contents__item.active
+													a(href="#")
+														.course-contents__item-left
+															
+															span.course-contents__num= item.num
+															span.course-contents__val= item.text
+														
+														.paid-chapters-item__right
+															.paid-chapters-item__icon-block
+																+icon('lock-open')
+															.paid-chapters-item__icon-block
+																+icon('eye')
+
+											else
+												li.course-contents__item
+													a(href="#")
+														.course-contents__item-left
+															
+															span.course-contents__num= item.num
+															span.course-contents__val= item.text
+														
+														.paid-chapters-item__right
+															.paid-chapters-item__icon-block
+																+icon('lock-open')
+															.paid-chapters-item__icon-block
+																+icon('eye')
+									
+									.course-contents__homework
+										a(href="#" ).ams-link
+											+icon('Homework')
+											| Домашнее задание
+		

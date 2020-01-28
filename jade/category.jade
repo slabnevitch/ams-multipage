@@ -1,0 +1,71 @@
+extends _misc/main
+
+block title
+	| Категория
+
+block content
+	.ams-banner
+		.ams-banner__img
+			img(src="img/category/category-banner.jpg", alt="alt")
+		.wrapper
+			.ams-banner__text
+				h4 Бесплатный видеокурс по AutoCAD
+				h1 Создай проект в AutoCAD 
+					br
+					| за 2 часа «С нуля» до печати
+				p Курс закроет все основные вопросы, 
+					br
+					| связанные с работой в AutoCAD
+				a(href="#").button.button-blue.button-lg Пройти курс бесплатно
+
+	.category-content.bg-gray
+		.wrapper
+			.category-top
+				h2 Статьи
+				.category-top__serch-block
+					a(href="#").ams-link-with-hover #[span стать автором]
+					.ams-search
+						label
+							input(type="text" placeholder="Поиск")
+							+icon('magnifier')
+	
+		.wrapper.ams-tiles
+			- var tiles = ['Мастер-класс №2 "Библиотеки AutoCAD и супер-извлечение данных"', 'Моторика работы в AutoCAD. Как чертить быстро.', 'Привязка Lisp-приложений'];
+			each tile, ind in tiles
+				a(href="#").ams-tile.ams-tile--bg
+					.ams-tile__img
+						img(src="img/category/"+(ind+1)+".jpg", alt="alt")
+
+					h4= tile
+					.ams-tile__bottom
+						.ams-tile__date 27.09.2018 г
+						.ams-tile__views
+							+icon('eye')
+							span 27.09.2018 г
+
+				if ind < 0 && ind < 3
+					a(href="#").ams-tile.ams-tile--bg
+						.ams-tile__img
+							img(src="img/category/2.jpg", alt="alt")
+
+						h4= tile
+						.ams-tile__bottom
+							.ams-tile__date 27.09.2018 г
+							.ams-tile__views
+								+icon('eye')
+								span 27.09.2018 г
+
+				
+			- for (var i=0; i < 6; i++)
+				a(href="#").ams-tile.ams-tile--bg
+					.ams-tile__img
+						img(src="img/category/"+(i+3)+".jpg", alt="alt")
+
+					h4 Мастер-класс №2 "Библиотеки AutoCAD и супер-извлечение данных"
+					.ams-tile__bottom
+						.ams-tile__date 27.09.2018 г
+						.ams-tile__views
+							+icon('eye')
+							span 27.09.2018 г
+			.button-wrapper
+				a(href="#").button.button-sm.button-std Показать еще

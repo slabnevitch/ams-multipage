@@ -1,0 +1,10 @@
+section.features
+	.wrapper
+		- var items = [{title: 'Онлайн-формат', text: 'Учитесь, когда удобно и где удобно — нужен только интернет'}, {title: 'Неограниченный доступ', text: 'Курс остается у вас в постоянном пользовании.'}, {title: 'Обновление и поддержка', text: 'Материалы курса пополняются новыми мастер-классами. Кураторы бесплатно помогают целый год.'}];
+		each item, ind in items
+			.features-item
+				.features-item__img
+					img(src="img/sect-features/"+(ind+1)+".svg", alt="alt")
+
+				h3= item.title
+				p= item.text

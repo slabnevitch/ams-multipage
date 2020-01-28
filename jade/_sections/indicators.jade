@@ -1,0 +1,27 @@
+section.indicators
+	.wrapper
+		.indicators-left
+			.indicators-logo
+				img(src="img/indicators-logo.svg", alt="alt")
+
+			.indicators-block
+				.indicators-block__val 16 754
+				+icon('arrow-top')
+				p студентов прошли наши полные курсы за 7 лет 
+
+			.indicators-block
+				.indicators-block__val 295 854
+				+icon('arrow-top')
+				p студентов прошли наши базовые курсы 
+
+			.indicators-block
+				.indicators-block__val 115 000+
+				+icon('arrow-top')
+				p самый крупный #[img(src="img/yt-icon-color.svg", alt="alt")]  
+					br
+					| канал по BIM, CAD, CG
+
+		.indicators-right
+			- for (var i=0; i < 2; i++)
+				.indicators-right__img
+					img(src="img/sect-indicators/image"+(i + 1)+".jpg", alt="alt")
