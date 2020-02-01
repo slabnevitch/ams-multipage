@@ -9,7 +9,12 @@ block content
 			h2 Мои программы обучения
 			- var navs = ['Revit', 'AutoCAD', 'ARCHICAD', '3ds Max'];
 			.programs-nav-container
-				ul.programs-nav
+				ul.programs-nav.programs-nav--cab
+					//- li Популярные
+					each nav, index in navs
+						li
+							a(href="#")= nav
+				//- ul.programs-nav.programs-nav--all-links
 					each nav, index in navs
 						if index == 0
 							li.active
@@ -46,7 +51,7 @@ block content
 				.ams-card__placeholder-top
 					img(src="img/cards/card-placeholder-top.svg", alt="alt")
 				
-				h3 Добавить онлайн-курсы
+				.fake-h3 Добавить онлайн-курсы
 				
 				.ams-card__placeholder-bottom
 					img(src="img/cards/card-placeholder-bottom.svg", alt="alt")
@@ -63,8 +68,8 @@ block content
 			- var wides = [{title: 'AutoCAD для начинающих', kind: 'Базовый курс', classname: 'base'}, {title: '10 ошибок начинающих пользователей AutoCAD', kind: 'Мастер-класс', classname: 'master-class'}, {title:'Динамические блоки в AutoCAD', kind: 'Вебинар', classname: 'webinar'}];
 					each item, ind in wides
 						a(href="#" class="ams-card ams-card--wide with-arrow bg-gray "+item.classname)
-							.ams-card__img
-									img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
+							.ams-card__img(style="background-image: url(img/cards/card-wide-"+(ind+1)+".jpg);")
+									//- img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
 							
 							.ams-card__body
 								.ams-card__header
@@ -79,7 +84,7 @@ block content
 
 							+icon('arrow-right')
 
-				a(href="#" class="ams-card ams-card--wide with-arrow ams-card--wide-empty with-arrow")
+				a(href="#" class="ams-card ams-card--wide with-arrow ams-card--wide-empty")
 					.ams-card__img
 							img(src="img/cards/card-wide-img-placeholder.svg", alt="alt")
 					
@@ -87,12 +92,13 @@ block content
 						.ams-card__header
 							img(src="img/cards/card-wide-placeholder-top.svg", alt="alt")
 
-						h3 Добавить 
+						.fake-h3 Добавить бесплатное
 								br
-								| онлайн-курсы
+								| занятие
 					
 						.ams-card__bottom
 							img(src="img/cards/card-wide-placeholder-bottom.svg", alt="alt")
+							img.two-stripes(src="img/cards/card-placeholder-bottom.svg", alt="alt")
 
 					+icon('Plus')
 

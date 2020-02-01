@@ -1,17 +1,70 @@
+.course{
+	h1{
+		@extend .fake-h2;
+
+		@include max-screen(576px){
+			margin-bottom: 20px;
+			font-size: 22px;
+			line-height: 27px;
+		}	
+	}
+}
 .course-wrapper{
 	align-items: flex-start;
+	@include max-screen( 576px){
+		padding: 0;
+		padding-right: 0;	
+	}	
+}
+.course-video-mob{
+	@include 	col();
+	@include 	size(12);
+	display: none;
+	.course-video__bottom{
+		border-bottom: none;
+
+	}
+	@include max-screen( 960px){
+			display: block;	
+	}
+	@include max-screen( 576px){
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;	
+	}	
 }
 .course-contents{
 	@include col();
 	@include size(4);
+	@include size-mdd(12);
+	@include max-screen( 576px){
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;	
+	}	
 }
 .course-information{
 	@include col();
 	@include size(8);
+	@include size-mdd(12);
+
+	.course-video{
+		@include max-screen( 960px){
+			display: none;	
+		}	
+	}
+	@include max-screen( 576px){
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;	
+	}	
 
 }
 .ams-scroll{
 	max-height: 900px;
+	@include max-screen( 992px){
+			max-height: 807px;	
+	}
 }
 .ams-scroll__inner{
 	padding: 30px;
@@ -47,11 +100,14 @@
 			top: 0;
 			left: -30px;
 			font-size: 17px;
+			color:$light-text;
 		}
 		.course-contents__num{
 			position: absolute;
 			width: 24px;
 			left: -7px;
+			// width: 44px;
+			// left: -27px;
 			text-align: right;
 			// margin-right: 19px;
 			color: $light-text;
@@ -60,23 +116,20 @@
 			display: block;
 			margin-left: 34px;
 		}
-		&.watched{
-			
-		}
+
 		&.locked{
 			.icon-loc-unopened{
 				display: block;
 			}
 		}
 	}
-	&.active{
-		a{
-			.course-contents__val{
-				
-				font-family: $bold;
-			}
+
+	&.light{
+		.course-contents__val{
+			color: $light-text;
 		}
 	}
+
 	&.visited{
 		a{
 			.icon-eye{
@@ -84,6 +137,10 @@
 			}
 			.icon-loc-unopened{
 				display: none;
+			}
+			.course-contents__val{
+				
+				font-family: $bold;
 			}
 			
 		}
@@ -97,15 +154,18 @@
 .course-contents__homework{
 	margin-bottom: 15px;
 	padding-left: 10px;
+	color: $light-text;
 	.ams-link{
-		font-size: 16px;
+		font-size: 15px;
 		text-decoration: none;
+		color: $light-text;
+		
 	}
 	.icon{
 		font-size: 16px;
 		margin-right: 19px;
-		// vertical-align: middle;
-	}
+		vertical-align: text-top;
+		color: $light-text;	}
 	
 }
 .jspVerticalBar{
@@ -153,6 +213,7 @@
 			font-size: 16px;	
 		}
 	}
+
 }
 .mejs__overlay-button{
 	width: 60px;
@@ -175,6 +236,11 @@
 		.course-discount-card{
 			width: 50%;
 			margin: 0;
+			position: relative;
+			
+			@include max-screen( 640px){
+				width: 100%;	
+			}
 		}
 		.course-discount-card{
 			padding: 10px 0 23px 32px;
@@ -182,12 +248,62 @@
 			
 			.button{
 				min-width: 168px;
+				@include max-screen(320px){
+					width: auto;
+				}
+			}
+			.icon-arrow-right{
+				@include absolute-center-old;
+				left: auto;
+				right: 0;
+				font-size: 100px;
+				color: #fff;
+
+				@include max-screen(1100px){
+					font-size: 50px;
+				}
+				@include max-screen(960px){
+					font-size: 100px;
+				}
+				@include max-screen(768px){
+					font-size: 50px;
+				}
+				@include max-screen(640px){
+					font-size: 100px;
+					bottom: 0;
+					top: auto;
+					right: 10px;
+					transform: rotate(90deg);
+				}
+				@include max-screen(320px){
+					font-size: 80px;
+				}
 			}
 		}
 		.ams-card{
 			background-color: $gray-bg;
+			@include max-screen( 576px){
+				border-radius: 0;	
+			}
 		}
 
+		@include max-screen( 992px){
+			padding-left: 0;
+			padding-right: 0;	
+		}	
+
+	}
+	&:first-child{
+		
+	}
+	&:last-child{
+		margin-bottom: none;
+	}
+	&:nth-child(){
+		
+	}
+	@include max-screen(960px){
+		border-bottom: none;
 	}
 }
 .course-discount{
@@ -204,7 +320,7 @@ font-family: $black;
 }
 .course-materials{
 
-	h4{
+	h4, .fake-h4{
 		margin-bottom: 12px;
 	}
 
@@ -283,4 +399,10 @@ font-family: $black;
 }
 .tippy-tooltip [x-circle]{
 	background-color: transparent;
+}
+.course-materials{
+	@include max-screen(576px){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }

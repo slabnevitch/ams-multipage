@@ -14,7 +14,7 @@
 				ul.tabs__content
 					li#item1.tabs__item
 						.ams_popup__spheres
-							h3 Какие сферы вам интересны?
+							.fake-h3 Какие сферы вам интересны?
 							- var list = ['Маркетинг', 'Бизнес и менеджмент', 'Дизайн и UX', 'Программирование', 'Аналитика и данные'];
 							
 							.spheres-list
@@ -38,7 +38,7 @@
 									| политики и пользовательского 
 									br
 									| соглашения
-								h4 Создать аккаунт через соцсети
+								.fake-h4 Создать аккаунт через соцсети
 
 								ul.ams-socials-colorised
 									li
@@ -53,6 +53,11 @@
 									li
 										a(href="#")
 											img(src="img/icons-svg/Round-Mail.svg", alt="")
+						
+						.ams-popup__backward
+								a(href="#").button-backward.button.button-empty вернуться назад
+									+icon('arrow-left')
+
 
 					li#item2.tabs__item.hidden
 						form
@@ -68,7 +73,7 @@
 									| политики и пользовательского 
 									br
 									| соглашения
-								h4 Создать аккаунт через соцсети
+								.fake-h4 Создать аккаунт через соцсети
 
 								ul.ams-socials-colorised
 									li
@@ -83,3 +88,7 @@
 									li
 										a(href="#")
 											img(src="img/icons-svg/Round-Mail.svg", alt="")
+
+						.ams-popup__backward
+								a(href="#").button-backward.button.button-empty вернуться назад
+									+icon('arrow-left')

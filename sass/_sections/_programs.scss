@@ -1,28 +1,12 @@
 .programs{
 	padding-bottom: rem(53);
-	h2{
+	.fake-h2{
 		margin-bottom: 32px;
 		@include max-screen(576px){
 			margin-bottom: 24px;
 		}  
 	}
-	.programs-nav{
-		li{
-			&:first-child{
-				// display: inline-block;
-
-				// vertical-align: middle;
-
-				// margin-right: 10px;
-
-				padding: 6px 15px;
-
-				font-size: 15px;
-				@extend .button;
-				// @extend .button-sm;
-			}
-		}
-	}
+	
 	.ams-card-wrapper{
 		.ams-card{
 
@@ -37,7 +21,9 @@
 	}
 	@include max-screen(576px){
 		padding-bottom: 0;
-	}  
+	}
+
+
 }
 .programs-nav-container{
 	@include col();
@@ -54,6 +40,10 @@
 			&:hover{
 				background-color: $accent;
 			}
+	}
+	@include max-screen(768px){
+		
+		padding-bottom: 10px;
 	}
 	@include max-screen(576px){
 		margin-bottom: 0;
@@ -80,9 +70,17 @@
 			font-family: $bold;
 			text-transform: uppercase;
 
+
 			&:hover{
 				background: $accent;
 				color: #fff;
+				@include max-screen(768px){
+					background-color: #5C9DFF;
+				}
+			}
+			@include max-screen(768px){
+				color: #fff;
+				background-color: $blue;
 			}
 
 		}
@@ -93,19 +91,38 @@
 				color: #fff;
 			}
 		}
-		&:first-child{
-			// padding: 6px 15px;
-			// margin-left: 0;
-			// @extend .button;
-			// &:hover{
-			// 	background-color: $accent;
-			// }
-			
-			// @extend .button-;
-		}
+		// &:first-child{
+		// 	padding: 6px 15px;
+		// 	font-size: 15px;
+		// 	// @extend .button;
+		// 	color: #fff;
+		// 	border-radius: 5px;
+		// 	text-transform: uppercase;
+		// 	font-family: $bold;
+		// 	background-color: $accent;
+		// }
 
 		@include max-screen(768px){
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 		}  
+	}
+	&--all-links{
+		li{
+			&:first-child{
+				padding: 0;
+
+				@include max-screen(768px){
+					background-color: $blue;
+				}
+			}
+			&.active{
+				a{
+					@include max-screen(768px){
+						background-color: $light-blue;
+					}
+					
+				}
+			}
+		}
 	}
 }

@@ -1,3 +1,9 @@
+.article-wrapper{
+	@include max-screen(576px){
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 .material{
 	&-soc{
 		@include col();
@@ -11,6 +17,12 @@
 				list-style-type: none;
 				margin-bottom: 20px;
 			}
+			@include max-screen(1200px){
+				left: 0;
+			}
+		}
+		@include max-screen(992px){
+			display: none;
 		}
 	}
 	&-soc__icons{
@@ -27,10 +39,18 @@
 	&-content{
 		@include col;
 		@include size(8);
+		@include size-superLg(7);
+		@include size-mdr(12);
+		@include max-screen(576px){
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 	&-sidebar{
 		@include col;
 		@include size(3);
+		@include size-superLg(4);
 		will-change: min-height;
 
 		&--padded{
@@ -43,12 +63,28 @@
 			transform: translate3d(0, 0, 0);
 			will-change: position, transform;
 		}
+		@include max-screen(992px){
+			display: none;
+		}
+	}
+	&-breadcrumbs{
+		@include max-screen(768px){
+			display: none;
+		}
 	}
 }
 article{
 	h2{
 		margin-top: 48px;
 		margin-bottom: 20px;
+
+		@include max-screen(576px){
+			margin-top: 30px;
+			margin-bottom: 14px;
+			font-size: 22px;
+			line-height: 27px;
+			text-align: center;
+		}
 	}
 	p{
 		margin: 0;
@@ -64,6 +100,27 @@ article{
 			font-size: 13px;
 			color: $ams-link;
 		}
+		@include max-screen(576px){
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		table{
+			min-width: 576px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		@include max-screen(768px){
+			max-width: 100%;
+			overflow-x: auto;
+		}
+	}
+	blockquote{
+		p{
+			@include max-screen(576px){
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 	}
 }
 .knowledge{
@@ -71,6 +128,7 @@ article{
 	&-inner{
 		@include col();
 		@include size(11);
+		@include size-mdr(12);
 	}
 	&-title{
 		margin-top: 40px;
@@ -82,12 +140,21 @@ article{
 }
 .mat-jce{
 		justify-content: flex-end;
-
+		@include max-screen(992px){
+			justify-content: flex-start;
+		}
 }
 .mat-pub{
 	p{
-		@include col();
-		@include size(11);
+		// background-color: red;
+		// @include col();
+		// @include size(11);
+		// @include size-mdr(12);
+		// @include max-screen(992px){
+		// 	width: 100%;
+		// 	margin-left: 0;
+		// 	margin-right: 0;
+		// }
 	}
 }
 blockquote{
@@ -98,7 +165,7 @@ blockquote{
 	color: $ams-link;
 	font-style: italic;
 
-	h3{
+	.fake-h3{
 		margin-top: 0;
 		margin-bottom: 10px;
 	}
@@ -137,8 +204,13 @@ article{
 	}
 	ul{
 		li{
+			position: relative;
+			padding-left: 30px;
 			&:before{
 				content: '';
+				position: absolute;
+				left: 0;
+				top: 7px;
 				display: inline-block;
 				vertical-align: middle;
 				margin-right: 22px;
@@ -153,6 +225,7 @@ article{
 	.mejs__container{
 		margin: 30px 0;
 	}
+
 }
 table{
 	table-layout: fixed;
@@ -188,6 +261,7 @@ table{
 	li{
 		display: inline-block;
 		margin-right: 16px;
+		margin-bottom: 13px;
 		list-style-type: none;
 		a{
 			display: block;
@@ -203,6 +277,9 @@ table{
 	&:last-child{
 		margin-right: 0;
 	}
+	@include max-screen(576px){
+		margin-top: 20px;
+	}
 
 }
 .mat-pub{
@@ -212,6 +289,7 @@ table{
 		margin: 0;
 		@include col();
 		@include size(11);
+		@include size-mdr(12);
 		font-size: 20px;
 		line-height: 24px;
 		color: $light-text;
@@ -222,8 +300,12 @@ table{
 			color: $light-text;
 		}
 	}
+	@include max-screen( 992px){
+		padding-top: 30px;	
+	}	
 }
 .material-banner{
+	width: 270px;
 	border-radius: 5px;
 	&--autocad{
 	  background: linear-gradient(61deg, #D30004 -17.4%, #E44C50 83.97%);

@@ -154,9 +154,10 @@
 				.icon{
 					color: $accent;
 					font-size: 15px;
+					
 					@include max-screen(480px){
+
 						font-size: 30px;
-						margin-right: 20px;
 					}
 					@include max-screen(320px){
 						font-size: 22px;
@@ -164,10 +165,24 @@
 				}
 			}
 
-			@include max-screen(480px){
-				margin: 0;
+			// @include max-screen(480px){
+			// 	margin: 0;
 
+			// }
+			@include max-screen(480px){
+						margin-right: 20px;
+					}
+			@include max-screen(480px){
+				margin-right: 30px;
+				margin-left: 0;
 			}
+
+			&:last-child{
+				@include max-screen(480px){
+					margin-right: 0;
+				}
+			}
+
 		}
 
 	}

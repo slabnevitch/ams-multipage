@@ -48,7 +48,9 @@
 	}
 
 	.header{
-		padding-top: 15px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		margin-bottom: 0;
 	}
 	.header-logo{
 		margin-right: 10px;
@@ -100,46 +102,85 @@
 	.sidebar-menu__nav li a .icon-chevron-down{
 		display: inline;
 	}
-
-
-
-
-	.ams-video-bottom{
-		margin-bottom: 5px;
+	.ams-banner__block .ams-tile__bottom{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
-	.ams-video-bottom__date{
-		margin-right: 10px;
+	article ul, article ol,
+	blockquote,
+	table,
+	article .mejs__container,
+	{
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
-	.ams-left{
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
+	article p,
+	article blockquote,
+	article h2,
+	.material-content .ams-tags{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.course-video__bottom{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		padding-right: 19px;
+		padding-left: 19px;
 
-		&__top{
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
-	.ams-text-block{
-		padding: 30px 15px 37px 15px;
-	}
-	.ams-popup{
-		max-width: 375px;	
-		padding: 66px 43px 85px 42px;
+		a{
+			font-size: 10px;
 
-		h4{
-			padding: 	0 15px;
-			text-align: center;		
-			font-size: 22px;
-				line-height: 27px;
-			br{
-				display: block;	
+			.icon{
+				
+			margin-top: -3px;
 			}
-		}
-		.ams-socials-colorised li{
-			margin: 	0 9px;
+
+			&:first-child{
+				margin-right: 0;
+			}
+
 		}
 	}
+	// .ams-video-bottom{
+	// 	margin-bottom: 5px;
+	// }
+	// .ams-video-bottom__date{
+	// 	margin-right: 10px;
+	// }
+	// .ams-left{
+	// 	width: 100%;
+	// 	margin-left: 0;
+	// 	margin-right: 0;
+
+	// 	&__top{
+	// 		padding-left: 15px;
+	// 		padding-right: 15px;
+	// 	}
+	// }
+	// .ams-text-block{
+	// 	padding: 30px 15px 37px 15px;
+	// }
+	// .ams-popup{
+	// 	max-width: 375px;	
+	// 	padding: 66px 43px 85px 42px;
+
+	// 	h4{
+	// 		padding: 	0 15px;
+	// 		text-align: center;		
+	// 		font-size: 22px;
+	// 			line-height: 27px;
+	// 		br{
+	// 			display: block;	
+	// 		}
+	// 	}
+	// 	.ams-socials-colorised li{
+	// 		margin: 	0 9px;
+	// 	}
+	// }
 }
 @media only screen and (max-width : 480px){
 	html{
@@ -150,17 +191,16 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
+	.course-video__bottom a:first-child .icon {
 
-		.header-logo{
-			max-width: 150px;
-		}
-		h2{
-			font-size: 25px;
-		}
-		.ams-video-bottom{
-			flex-direction: column;
-			align-items: flex-start;
-		}
+		margin-right: 5px;
+
+	}
+	.course-video__bottom a:last-child .icon {
+
+    margin-left: 4px;
+
+	}
 }
 
 

@@ -40,7 +40,9 @@
 		margin-bottom: 0;
 	}
 
-	
+	@include max-screen(768px){
+		text-align: center;	
+	}
 }
 .indicators-logo{
 	max-width: 530px;
@@ -84,7 +86,7 @@
 			line-height: rem(90);
 
 			@include max-screen(576px){
-				font-size: 78px;
+				font-size: 77px;
 				line-height: 68px;
 			}  
 			@include max-screen(358px){

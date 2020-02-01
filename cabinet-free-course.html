@@ -19,7 +19,7 @@
           </svg>
       <div class="wrapper">
         <div class="fullpage-menu__top">
-          <h3>ОНЛАЙН-КУРСЫ</h3>
+          <div class="fake-h3">ОНЛАЙН-КУРСЫ</div>
         </div>
         <div class="sidebar-menu__list">
           <ul class="sidebar-menu__nav">
@@ -169,7 +169,7 @@
     </div>
     <header class="header">
       <div class="wrapper">
-        <div class="header-inner"><a href="#" class="ams-logo"><img src="img/logo.svg" alt="alt"></a><a href="#" class="header-backward button button-empty">мои курсы
+        <div class="header-inner"><a href="#" class="toggle-mnu"><span></span></a><a href="#" class="ams-logo"><img src="img/logo.svg" alt="alt"></a><a href="#" class="button-backward button button-empty">мои курсы
                 <svg class="icon icon-arrow-left ">
                   <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
                 </svg></a>
@@ -193,16 +193,30 @@
     </header>
     <section class="course ams-simple-sect">
       <div class="wrapper">
-        <h2>Базовый курс по Revit</h2>
+        <h1>Базовый курс по Revit</h1>
       </div>
       <div class="wrapper course-wrapper">
+        <div class="course-video-mob">
+          <div class="course-video">
+            <video poster="img/poster.jpg">
+              <source src="https://www.youtube.com/watch?v=dGt08ylXCj0&amp;list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&amp;index=3&amp;t=0s" type="video/youtube">
+            </video>
+            <div class="course-video__bottom course-block"><a href="#">
+                    <svg class="icon icon-arrow-left ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                    </svg>Предыдущий урок</a><a href="#">Следующий урок
+                    <svg class="icon icon-arrow-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-right"></use>
+                    </svg></a></div>
+          </div>
+        </div>
         <div class="course-contents bg-gray">
           <div class="ams-scroll scroll-pane">
             <div class="ams-scroll__inner">
               <div class="course-contents__chapter">
                 <div class="course-contents__title">Раздел 1. Теория</div>
                 <ul class="course-contents__list">
-                  <li class="course-contents__item active"><a href="#">
+                  <li class="course-contents__item visited"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -236,8 +250,15 @@
                           </svg>
                           <svg class="icon icon-loc-unopened ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
+                          </svg><span class="course-contents__num">1.3</span><span class="course-contents__val">Оси и уровни</span></a></li>
+                  <li class="course-contents__item light"><a href="#">
+                          <svg class="icon icon-eye ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
+                          </svg>
+                          <svg class="icon icon-loc-unopened ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
                           </svg><span class="course-contents__num">1.4</span><span class="course-contents__val">Несущие стены</span></a></li>
-                  <li class="course-contents__item"><a href="#">
+                  <li class="course-contents__item light"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -249,7 +270,7 @@
               <div class="course-contents__chapter">
                 <div class="course-contents__title">Раздел 2. Практика</div>
                 <ul class="course-contents__list">
-                  <li class="course-contents__item active"><a href="#">
+                  <li class="course-contents__item"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -283,8 +304,15 @@
                           </svg>
                           <svg class="icon icon-loc-unopened ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
+                          </svg><span class="course-contents__num">1.3</span><span class="course-contents__val">Перекрытия</span></a></li>
+                  <li class="course-contents__item light"><a href="#">
+                          <svg class="icon icon-eye ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
+                          </svg>
+                          <svg class="icon icon-loc-unopened ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
                           </svg><span class="course-contents__num">1.4</span><span class="course-contents__val">Окна, двери, витражи</span></a></li>
-                  <li class="course-contents__item"><a href="#">
+                  <li class="course-contents__item light"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -300,7 +328,7 @@
               <div class="course-contents__chapter">
                 <div class="course-contents__title">Раздел 3. Ещё практика</div>
                 <ul class="course-contents__list">
-                  <li class="course-contents__item active"><a href="#">
+                  <li class="course-contents__item"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -334,8 +362,15 @@
                           </svg>
                           <svg class="icon icon-loc-unopened ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
+                          </svg><span class="course-contents__num">1.3</span><span class="course-contents__val">Перекрытия</span></a></li>
+                  <li class="course-contents__item light"><a href="#">
+                          <svg class="icon icon-eye ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
+                          </svg>
+                          <svg class="icon icon-loc-unopened ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
                           </svg><span class="course-contents__num">1.4</span><span class="course-contents__val">Окна, двери, витражи</span></a></li>
-                  <li class="course-contents__item"><a href="#">
+                  <li class="course-contents__item light"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -351,7 +386,7 @@
               <div class="course-contents__chapter">
                 <div class="course-contents__title">Раздел 2. Практика</div>
                 <ul class="course-contents__list">
-                  <li class="course-contents__item active"><a href="#">
+                  <li class="course-contents__item"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -385,8 +420,15 @@
                           </svg>
                           <svg class="icon icon-loc-unopened ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
+                          </svg><span class="course-contents__num">1.3</span><span class="course-contents__val">Перекрытия</span></a></li>
+                  <li class="course-contents__item light"><a href="#">
+                          <svg class="icon icon-eye ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
+                          </svg>
+                          <svg class="icon icon-loc-unopened ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
                           </svg><span class="course-contents__num">1.4</span><span class="course-contents__val">Окна, двери, витражи</span></a></li>
-                  <li class="course-contents__item"><a href="#">
+                  <li class="course-contents__item light"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -402,7 +444,7 @@
               <div class="course-contents__chapter">
                 <div class="course-contents__title">Раздел 3. Ещё практика</div>
                 <ul class="course-contents__list">
-                  <li class="course-contents__item active"><a href="#">
+                  <li class="course-contents__item"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -436,8 +478,15 @@
                           </svg>
                           <svg class="icon icon-loc-unopened ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
+                          </svg><span class="course-contents__num">1.3</span><span class="course-contents__val">Перекрытия</span></a></li>
+                  <li class="course-contents__item light"><a href="#">
+                          <svg class="icon icon-eye ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
+                          </svg>
+                          <svg class="icon icon-loc-unopened ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#loc-unopened"></use>
                           </svg><span class="course-contents__num">1.4</span><span class="course-contents__val">Окна, двери, витражи</span></a></li>
-                  <li class="course-contents__item"><a href="#">
+                  <li class="course-contents__item light"><a href="#">
                           <svg class="icon icon-eye ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#eye"></use>
                           </svg>
@@ -467,7 +516,7 @@
                     </svg></a></div>
           </div>
           <div class="course-materials course-block">
-            <h4>Вспомогательные материалы</h4>
+            <div class="fake-h4">Вспомогательные материалы</div>
             <p>Скачайте и установите <a href="#">плагин</a> для просмотра курса</p>
             <p>Дополнительные материалы: <a href="#">Яндекс Диск</a> | <a href="#">Google Диск</a></p>
             <p>Текстуры: <a href="#">Яндекс Диск</a> | <a href="#">Google Диск</a></p>
@@ -496,7 +545,10 @@
                       <div class="promo-date__val">00</div><span>секунды</span>
                     </div>
                   </div>
-                </div><a href="#" class="button button-black button-sm">Подробнее </a>
+                </div>
+                    <svg class="icon icon-arrow-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-right"></use>
+                    </svg><a href="#" class="button button-black button-sm">Подробнее </a>
               </div><a href="#" class="ams-card">
                 <div class="ams-card__top">
                   <div class="ams-card__kind">Онлайн-курс</div>
@@ -518,11 +570,7 @@
                     </div>
                     <p>Подготовка не требуется</p>
                   </div>
-                  <div class="ams-card__img"><img src="img/cards/1.jpg" alt="alt">
-                        <svg class="icon icon-arrow-right ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-right"></use>
-                        </svg>
-                  </div>
+                  <div class="ams-card__img"><img src="img/cards/1.jpg" alt="alt"></div>
                 </div></a>
             </div>
           </div>
@@ -610,7 +658,7 @@
           <ul class="tabs__content">
             <li id="item1" class="tabs__item">
               <div class="ams_popup__spheres">
-                <h3>Какие сферы вам интересны?</h3>
+                <div class="fake-h3">Какие сферы вам интересны?</div>
                 <div class="spheres-list"><a href="#" class="button button-empty button-std">Маркетинг</a><a href="#" class="button button-empty button-std">Бизнес и менеджмент</a><a href="#" class="button button-empty button-std">Дизайн и UX</a><a href="#" class="button button-empty button-std">Программирование</a><a href="#" class="button button-empty button-std">Аналитика и данные</a>
                 </div><a href="#" id="form-spheres-forward" class="button button-std button-blue hidden">Далее</a>
               </div>
@@ -627,7 +675,7 @@
                 <div class="ams_popup__form-bottom">
                   <button class="button button-std button-blue">Создать аккаунт</button>
                   <p>Нажимая кнопку, принимаю условия <br>политики и пользовательского <br>соглашения</p>
-                  <h4>Создать аккаунт через соцсети</h4>
+                  <div class="fake-h4">Создать аккаунт через соцсети</div>
                   <ul class="ams-socials-colorised">
                     <li><a href="#"><img src="img/icons-svg/Round-VK.svg" alt=""></a></li>
                     <li><a href="#"><img src="img/icons-svg/Round-Facebook.svg" alt=""></a></li>
@@ -636,6 +684,10 @@
                   </ul>
                 </div>
               </form>
+              <div class="ams-popup__backward"><a href="#" class="button-backward button button-empty">вернуться назад
+                      <svg class="icon icon-arrow-left ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                      </svg></a></div>
             </li>
             <li id="item2" class="tabs__item hidden">
               <form>
@@ -648,7 +700,7 @@
                 <div class="ams_popup__form-bottom">
                   <button class="button button-std button-blue">Создать аккаунт</button>
                   <p>Нажимая кнопку, принимаю условия <br>политики и пользовательского <br>соглашения</p>
-                  <h4>Создать аккаунт через соцсети</h4>
+                  <div class="fake-h4">Создать аккаунт через соцсети</div>
                   <ul class="ams-socials-colorised">
                     <li><a href="#"><img src="img/icons-svg/Round-VK.svg" alt=""></a></li>
                     <li><a href="#"><img src="img/icons-svg/Round-Facebook.svg" alt=""></a></li>
@@ -657,6 +709,10 @@
                   </ul>
                 </div>
               </form>
+              <div class="ams-popup__backward"><a href="#" class="button-backward button button-empty">вернуться назад
+                      <svg class="icon icon-arrow-left ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                      </svg></a></div>
             </li>
           </ul>
         </div>

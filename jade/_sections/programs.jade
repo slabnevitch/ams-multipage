@@ -1,11 +1,11 @@
 section.programs.ams-std-sect.bg-gray
 	.wrapper
-		h2 20+ программ обучения
+		.fake-h2 20+ программ обучения
 		- var navs = ['Revit', 'AutoCAD', 'ARCHICAD', '3ds Max'];
 		.programs-nav-container
 
 			ul.programs-nav
-				li Популярные
+				//- li Популярные
 				each nav, index in navs
 					li
 						a(href="#")= nav
@@ -17,7 +17,7 @@ section.programs.ams-std-sect.bg-gray
 			a(href="#").ams-card
 				.ams-card__top
 					.ams-card__kind Онлайн-курс
-					h3= card
+					h2= card
 				.ams-card__body
 					.ams-card__text
 						.ams-card__info
@@ -36,7 +36,7 @@ section.programs.ams-std-sect.bg-gray
 
 		a(href="#").ams-card.ams-card--template
 			.ams-card__top
-				h3 Все курсы
+				h2 Все курсы
 			.ams-card__body
 				.ams-card__text
 					.ams-card__info

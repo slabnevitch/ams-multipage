@@ -6,21 +6,27 @@ block title
 block content
 	.wrapper
 		- var crumbs = ['Главная', 'Уроки AutoCAD', 'Идеальный шаблон AutoCAD - какой он? Подробный разбор'];
-		ul.ams-breadcrumbs.ams-breadcrumbs--slash
+		ul.ams-breadcrumbs.ams-breadcrumbs--slash.material-breadcrumbs
 			each item in crumbs
 				li
 					a(href="#")= item
+		a(href="#").link-backward
+			+icon('arrow-left')
+			| Статьи
 
 	
 	.ams-banner.ams-banner--material
 		.ams-banner__img
-			img(src="img/material/banner.jpg", alt="alt")
+			img(src="img/material/banner-gray-lg.jpg", alt="alt")
 		.wrapper
 			.ams-banner__text
 				.ams-banner__block
 					h1 Идеальный шаблон AutoCAD - 
 						br 
 						| какой он? Подробный разбор
+
+
+					img(src="img/material/banner-gray.jpg", alt="alt").banner-grayscale
 					
 					.ams-tile__bottom
 						.ams-tile__date 27.09.2018 г
@@ -29,7 +35,7 @@ block content
 							span 27.09.2018 г
 	
 	sect.material
-		.wrapper.mat-jce
+		.wrapper.mat-jce.article-wrapper
 			.material-soc.material-soc--toped
 				.material-soc__icons
 					- var icons = ['fb', 'vk', 'yt', 'tg', 'mail', 'ya', 'tw'];
@@ -72,7 +78,7 @@ block content
 							li= item
 
 					blockquote
-						h3 Примечание
+						.fake-h3 Примечание
 						p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон».
 
 					h2 Системные переменные и их показатели
@@ -82,26 +88,27 @@ block content
 					-var tds2 = ['Музыка', 'Переменная', 'Показатель'];
 					-var tds3 = ['Производство', 'Обозначение', 'Значение'];
 
-					table
-						thead
-							tr
-								each item in ths
-									th= item
+					figure
+						table
+							thead
+								tr
+									each item in ths
+										th= item
 
-						tbody
-							tr
-								each item in tds1
-									td= item
+							tbody
+								tr
+									each item in tds1
+										td= item
 
-							- for (var i=0; i < 6; i++)
-								if i & 1
-									tr
-										each item in tds3
-											td= item
-								else
-									tr
-										each item in tds2
-											td= item
+								- for (var i=0; i < 6; i++)
+									if i & 1
+										tr
+											each item in tds3
+												td= item
+									else
+										tr
+											each item in tds2
+												td= item
 					
 					p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон». Этим я хочу облегчить задачу новым пользователям AutoCAD, так как цель данной статьи показать общие возможности программы в направлении стандартизации проектирования и минимизации рутинных процессов, а не просто рассказать о файле формата DWT.
 
@@ -109,7 +116,7 @@ block content
 						source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
 
 					blockquote
-						h3 P.S.
+						.fake-h3 P.S.
 						p В данной статье понятие «шаблон Автокад» имеет более широкий смысл. Я стараюсь быть корректным в терминах, но умышленно объединяю понятия: шаблон, элементы рабочего пространства и пути к вспомогательным файлам в единое понятие «Шаблон».
 			
 				- var tags = ['шаблоны', 'стили', 'маркеры', 'полилиния'];

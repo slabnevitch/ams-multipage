@@ -7,7 +7,7 @@ block content
 	section.catalog
 		.wrapper.catalog-wrapper
 			.catalog-sidebar
-				h3 Каталог курсов
+				h1 Каталог курсов
 				.sidebar-menu__list
 					- var list = [{title: 'Все направления', href: ''}, {title:'AutoCAD', href: 'autocad'}, {title:'Revit', href: 'revit'}, {title: 'ARCHICAD', href: ''}, {title: '3ds Max', href: ''}, {title: 'Civil 3D', href: ''} ];
 					ul.sidebar-menu__nav
@@ -127,9 +127,8 @@ block content
 					- var wides = [{title: 'AutoCAD для начинающих', kind: 'Базовый курс', classname: 'base'}, {title: '10 ошибок начинающих пользователей AutoCAD', kind: 'Мастер-класс', classname: 'master-class'}, {title:'Динамические блоки в AutoCAD', kind: 'Вебинар', classname: 'webinar'}];
 					each item, ind in wides
 						a(href="#" class="ams-card ams-card--wide "+item.classname)
-							.ams-card__img
-									img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
-									+icon('arrow-right')
+							.ams-card__img(style="background-image: url(img/cards/card-wide-"+(ind+1)+".jpg)")
+									//- img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
 							
 							.ams-card__body
 								.ams-card__header
@@ -141,6 +140,8 @@ block content
 								.ams-card__bottom
 									.ams-card__volume 4 урока
 									.ams-card__expr Подготовка не требуется
+								
+								+icon('arrow-right')
 
 				h2(id="revit") Курсы Revit
 				.wrapper-wide.ams-card-wrapper
@@ -190,9 +191,8 @@ block content
 					- var wides = [{title: 'AutoCAD для начинающих', kind: 'Базовый курс', classname: 'base'}, {title: '10 ошибок начинающих пользователей AutoCAD', kind: 'Мастер-класс', classname: 'master-class'}, {title:'Динамические блоки в AutoCAD', kind: 'Вебинар', classname: 'webinar'}];
 					each item, ind in wides
 						a(href="#" class="ams-card ams-card--wide "+item.classname)
-							.ams-card__img
-									img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
-									+icon('arrow-right')
+							.ams-card__img(style="background-image: url(img/cards/card-wide-"+(ind+1)+".jpg)")
+									//- img(src="img/cards/card-wide-"+(ind+1)+".jpg", alt="alt")
 							
 							.ams-card__body
 								.ams-card__header
@@ -204,3 +204,5 @@ block content
 								.ams-card__bottom
 									.ams-card__volume 4 урока
 									.ams-card__expr Подготовка не требуется
+
+								+icon('arrow-right')

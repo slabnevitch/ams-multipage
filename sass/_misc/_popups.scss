@@ -18,6 +18,7 @@
 				list-style-type: none;
 				display: table-cell;
 				vertical-align: middle;
+				cursor: pointer;
 				.tabs__link{
 					display: block;
 					padding: 27px;
@@ -27,6 +28,15 @@
 					color: $light-text;
 					text-decoration: none;
 					text-align: center;
+
+					@include max-screen(768px){
+						padding-left: 15px;
+						padding-right: 15px;
+					}  
+					@include max-screen(320px){
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
 				}
 				&:first-child{
 					border-right: 2px solid #fff;
@@ -43,14 +53,35 @@
 		
 
 	}
+
+	@include max-screen(768px){
+		max-width: 362px;
+		padding: 0;
+	}  
+	@include max-screen(480px){
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 .ams_popup__body{
 
-	padding: rem(40) rem(50) rem(53) rem(50);
+	padding: rem(40) rem(50) rem(45) rem(50);
+	@include max-screen(768px){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.ams-popup__backward{
+		display: none;
+		padding-top: 43px;
+
+		@include max-screen(768px){
+			display: block;
+		}  
+	}  
 }
 .ams_popup__spheres{
 	text-align: center;
-	h3{
+	.fake-h3{
 		margin-bottom: 30px;
 	}
 	.button{

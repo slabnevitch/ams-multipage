@@ -10,18 +10,16 @@
 		// end toggle mobile-menu
 
 		// account-dropdown
-			$('.ams-account__username').click(function(e) {
+			$('.ams-account').click(function(e) {
 				e.stopPropagation();
-				$(this).parent().toggleClass('open');
+				$(this).toggleClass('open');
 			});
 
-			$('.ams-account__dropdown, .ams-account__username').click(function(e) {
+			$('.ams-account').click(function(e) {
 				e.stopPropagation();
 			});
 			$('body').click(function() {
-				$('.ams-account__dropdown')
-					.parent()
-					.removeClass('open');
+				$('.ams-account').removeClass('open');
 			})
 		// account-dropdown
 
@@ -85,15 +83,15 @@
 		// end mobile-menu acordeon
 
 		// tabs
-			var $tabs = $('.tabs__link');
+			var $tabs = $('.tabs__item');
 
 			$tabs.on('click', function(e) {
 				e.preventDefault();
 				var $th = $(this),
-				$href = $th.attr('href'),
-				$tabs = $th.closest('.tabs'),
-				$parent = $th.parent();
-				$parent.addClass('tabs__item--active')
+				$href = $th.find('.tabs__link').attr('href'),
+				$tabs = $th.closest('.tabs');
+				// $parent = $th.parent();
+				$th.addClass('tabs__item--active')
 				.siblings()
 				.removeClass('tabs__item--active');
 
@@ -129,7 +127,7 @@
 		// end Accordeon-----------------------------------
 
 		// popoups
-			$('.to-popup').magnificPopup({
+			var enterPopup = $('.to-popup').magnificPopup({
 				type: 'inline',
 				preloader: false,
 				focus: '#name',
@@ -176,6 +174,10 @@
 				}
 			}
 		});
+
+			$('.ams-popup__backward .button-backward').click(function() {
+				enterPopup.magnificPopup('close');
+			});
 		// end popoups
 
 		// spheres handle

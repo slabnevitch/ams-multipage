@@ -13,11 +13,16 @@
 				font-size: 12px;
 			}
 		}
+
+		@include max-screen(576px){
+			display: none;
+		}  
 	}
 }
 .paid-chapters__top{
 	@include col();
-	@include size(12);
+	@include size(8);
+	@include size-lg(12);
 	h1{
 		margin-top: 6px;
 		margin-bottom: 20px;
@@ -41,14 +46,37 @@
 		}
 		&:last-child{
 			margin-right: 0;
+			@include max-screen(768px){
+				display: block;
+				margin-bottom: 0;
+			} 
 		}
-
+		@include max-screen(768px){
+			display: block;
+			margin-bottom: 13px;
+		}  
 	}
+	@include max-screen(576px){
+		padding-bottom: 25px;
+	}  
 }
 .paid-chapters{
 	padding-top: 30px;
+	.wrapper{
+		@include max-screen(480px){
+			padding-left: 0;
+			padding-right: 0;
+		}  
+	}
 	.headeing{
 		margin-bottom: 30px;
+		.ams-link{
+			margin-right: 65px;
+
+			@include max-screen(768px){
+				margin-right: 50px;
+			}  
+		}
 	}
 	&__items{
 		@include col();
@@ -56,8 +84,22 @@
 		li{
 			list-style-type: none;
 		}
+
+		@include max-screen(480px){
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}  
 	}
 	&-item{
+		a{
+			.course-contents__val{
+				margin-left: 63px;
+				@include max-screen(768px){
+					margin-left: 34px;
+				}  
+			}
+		}
 		&.active{
 			.acordeon-link{
 				.icon{
@@ -73,15 +115,21 @@
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-		// align-items: flex-start;
-		justify-content: space-between;
+		flex-wrap: wrap;
 		padding-top: 20px;
 		padding-right: 49px;
 		padding-bottom: 10px;
 		margin-bottom: 3px;
 		color: $text;
 		border-radius: 5px;
-		// text-decoration: none;
+		
+		@include max-screen(768px){
+			padding-right: 20px;
+			padding-bottom: 20px;
+		}  
+		@include max-screen(480px){
+			border-radius: 0;
+		}
 	}
 	&__sublist{
 		padding: 28px 28px 0 25px;
@@ -101,15 +149,60 @@
 			justify-content: space-between;
 			padding-right: 68px;
 
-			// &:after{
-			// 	display: none;
-			// }
+			@include max-screen(768px){
+				padding-right: 15px;
+			}
+			&:hover{
+				.course-contents__val{
+					font-family: $bold;
+				}
+			}
+
 		}
+		.course-contents__chapter{
+			@include max-screen(768px){
+				margin-bottom: 0;
+			}
+			.course-contents__homework{
+				margin-bottom: 0;
+				.ams-link{
+					font-size: 15px;
+					color: $text;
+				}
+
+				.icon{
+					margin-right: 47px;
+					vertical-align: text-top;
+					@include max-screen(768px){
+						margin-right: 19px;
+						margin-top: 1px;
+					}  
+				}
+			}
+			
+		}
+		@include max-screen(768px){
+			padding-left: 10px;
+			padding-right: 0;
+		}
+		@include max-screen(576px){
+			padding-top: 5px;
+		}  
 	}
 	&__subitem{
 		padding-bottom: 35px;
+		.paid-chapters-item__icon-block{
+			@include max-screen(768px){
+				width: 30px;				
+			}  
+		}
+		@include max-screen(768px){
+			padding-bottom: 7px;
+		}
 	}
-
+	@include max-screen(768px){
+		padding-top: 0;
+	}  
 }
 .paid-chapters-item{
 	margin-bottom: 30px;
@@ -128,12 +221,13 @@
 		display: -o-flex;
 		display: flex;
 		align-items: center;
+		margin-left: auto;
 	}
 	&__icon-block{
 		width: 50px;
 		text-align: center;
 		.icon{
-			font-size: 16px;
+			font-size: 14px;
 			color: $light-text;
 
 			&-chevron-down{
@@ -150,6 +244,14 @@
 		text-align: center;
 		color: $light-text;
 		font-family: $bold;
+
+		@include max-screen(768px){
+			padding-top: 0;
+			width: auto;
+			padding-left: 20px;
+			margin-right: 10px;
+
+		}  
 	}
 	&__kind{
 		margin-bottom: 15px;
@@ -157,11 +259,46 @@
 		line-height: 12px;
 		text-transform: uppercase;
 		font-family: $bold;
+
+		&--mob{
+			display: none;
+			margin-bottom: 0;
+			font-size: 15px;
+			line-height: inherit;
+			text-transform: uppercase;
+			@include max-screen(768px){
+				display: block;
+			}  
+		}
 	}
 	&__body{
-		h3{
+		h2{
+			@extend .fake-h3;
+			max-width: 410px;
 			margin-bottom: 19px;
+			@include max-screen(768px){
+				margin-bottom: 7px;
+				max-width: none;
+			}
+			
+			@include max-screen(320px){
+				font-size: 18px;
+			}
 		}
+		@include max-screen(768px){
+			order: 1;
+			width: 100%;
+		}
+		.paid-chapters-item__kind{
+			@include max-screen(768px){
+				display: none;
+			}  
+		}
+		
+		@include max-screen(768px){
+			padding-left: 20px;
+			margin-top: 15px;
+		}  
 	}
 	&__bottom{
 		font-size: 13px;
@@ -189,5 +326,33 @@
 		padding-left: 32px;
 		padding-right: 32px;
 	}
+	@include max-screen( 576px){
+			display: none;	
+	}
 }
 
+.paid-chapters__sublist .course-contents__item a .icon{
+	font-size: 14px;
+	position: relative;
+	left: 0;
+	&.icon-open{
+		font-size: 11px;
+		top: 3px;
+
+		@include max-screen(768px){
+			top: 1px;
+			font-size: 10px;
+		}  
+	}
+	&.icon-lock-open{
+		top: 3px;
+		@include max-screen(768px){
+			font-size: 13px;
+		}  
+	}
+}
+.paid-chapters__subitem .paid-chapters-item__icon-block{
+	@include max-screen(768px){
+		width: 22px;
+	}  
+}

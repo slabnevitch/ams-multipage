@@ -6,8 +6,22 @@ block title
 block content
 	section.course.ams-simple-sect
 		.wrapper
-			h2 Базовый курс по Revit
+			h1 Базовый курс по Revit
+		
 		.wrapper.course-wrapper
+			.course-video-mob
+				.course-video
+					video(poster="img/poster.jpg")
+						source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+
+
+					.course-video__bottom.course-block
+						a(href="#")
+							+icon('arrow-left')
+							| Предыдущий урок
+						a(href="#") Следующий урок
+							+icon('arrow-right')
+			
 			.course-contents.bg-gray
 				.ams-scroll.scroll-pane
 					.ams-scroll__inner
@@ -18,7 +32,7 @@ block content
 							ul.course-contents__list
 								each item, ins in list1
 									if ins == 0
-										li.course-contents__item.active
+										li.course-contents__item.visited
 											a(href="#")
 												+icon('eye')
 												+icon('loc-unopened')
@@ -29,6 +43,14 @@ block content
 									if ins == 2
 										li.course-contents__item
 											a(href="#").locked
+												+icon('eye')
+												+icon('loc-unopened')
+												span.course-contents__num= item.num
+												span.course-contents__val= item.text
+
+									if ins > 2 && ins < 10
+										li.course-contents__item.light
+											a(href="#")
 												+icon('eye')
 												+icon('loc-unopened')
 												span.course-contents__num= item.num
@@ -51,7 +73,7 @@ block content
 										ul.course-contents__list
 											each item, ins in list2
 												if ins == 0
-													li.course-contents__item.active
+													li.course-contents__item
 														a(href="#")
 															+icon('eye')
 															+icon('loc-unopened')
@@ -61,6 +83,14 @@ block content
 												if ins == 2
 													li.course-contents__item
 														a(href="#").locked
+															+icon('eye')
+															+icon('loc-unopened')
+															span.course-contents__num= item.num
+															span.course-contents__val= item.text
+
+												if ins > 2 && ins < 10
+													li.course-contents__item.light
+														a(href="#")
 															+icon('eye')
 															+icon('loc-unopened')
 															span.course-contents__num= item.num
@@ -93,7 +123,7 @@ block content
 							+icon('arrow-right')
 
 				.course-materials.course-block
-					h4 Вспомогательные материалы
+					.fake-h4 Вспомогательные материалы
 					p Скачайте и установите #[a(href="#") плагин] для просмотра курса
 					p Дополнительные материалы: #[a(href="#") Яндекс Диск] | #[a(href="#") Google Диск]
 					p Текстуры: #[a(href="#") Яндекс Диск] | #[a(href="#") Google Диск]
@@ -133,6 +163,8 @@ block content
 										.promo-date__val 00
 										span секунды
 							
+							+icon('arrow-right')
+							
 							a(href="#").button.button-black.button-sm Подробнее 
 
 						a(href="#").ams-card
@@ -153,7 +185,6 @@ block content
 
 								.ams-card__img
 									img(src="img/cards/1.jpg", alt="alt")
-									+icon('arrow-right')
 													
 				.course-comments
 					script(type='text/javascript').

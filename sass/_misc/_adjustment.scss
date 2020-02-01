@@ -96,7 +96,7 @@ input{
 	padding-top: rem(60);
 	padding-bottom: rem(71);
 
-	h2{
+	h2, .fake-h2{
 		@include col();
 		@include size(12);
 		margin-bottom: 47px;
@@ -107,12 +107,13 @@ input{
 	
 }
 .ams-simple-sect{
-	h2{
+	h2, .fake-h2, h1{
 		@include col();
 		@include size(12);
 		margin-bottom: 47px;
 		margin-top: 17px;
 	}
+
 }
 .with-heading{
 	padding-top: rem(60);
@@ -136,7 +137,7 @@ input{
 	justify-content: space-between;
 	align-items: center;
 
-	h2{
+	h2, .fake-h2{
 		margin-bottom: 0;
 	}
 
@@ -204,7 +205,7 @@ input{
   	margin-right: 30px;
   }
   @include max-screen(480px){
-  	margin-right: 10px;
+  	margin-right: .0;
   }
 } 
 ol{
@@ -212,15 +213,19 @@ ol{
 		margin-left: 0;
 		padding-left: 0;
 		li{
+			position: relative;
+			padding-left: 30px;
 			margin-bottom: 5px;
 			list-style-type: none;
 			&:before{
+				position: absolute;
+				left: 0;
 				 counter-increment: myCounter;
 				  content:counter(myCounter)".";
 				  color: $light-text;
 				  display: inline-block;
 				  text-align: right;
-				  margin-right: 20px;
+				 
 				  font-family: $semi;
 
 			}
@@ -239,6 +244,7 @@ ol{
 
 .ams-slider-nav{
 	flex-shrink: 0;
+	margin-right: 10px;
 	@include max-screen(576px){
 		display: none;
 	}  
@@ -346,6 +352,12 @@ ol{
   &-lg{
   	padding: 16px 30px 17px 30px;
   	font-size: 15px;
+
+  	@include max-screen(320px){
+  		padding-left: 20px;
+  		padding-right: 20px;
+  		width: 100%;
+  	}  
   }
   &-black{
   	background-color: $text;
@@ -369,6 +381,23 @@ ol{
 	
    
 }
+.button-backward{
+	display: inline-block;
+	margin-left: 34px;
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: -35px;
+		margin-top: -8px;
+		font-size: 16px;
+	}
+	
+}
+.blocks-reset-375{
+	width: 100%;	
+	margin-left: 0;
+	margin-right: 0;	
+}
 section{
 	.button{
 		@include max-screen(320px){
@@ -379,11 +408,15 @@ section{
 		}  
 	}
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6,
+.fake-h3,
+.fake-h4,
+.fake-h2,
+.fake-h1{
 	font-weight: normal;
 	font-family: $bold;
 }
-h1{
+h1, .fake-h1{
 	margin-top: rem(31px);
 	margin-bottom: rem(22px);
 	font-size: rem(50px);
@@ -395,22 +428,23 @@ h1{
 			
 		} 
 }
-h2{
+h2, .fake-h2{
 	margin-top: 0;
 	margin-bottom: 15px;
 	font-size: 33px;
 	line-height: 130%;
 }
-h3{
+h3, .fake-h3{
 	margin: 0;
 	font-size: 22px;
 	line-height: 27px;
 }
-h4{
+h4, .fake-h4{
 	margin: 0;
 	font-size: 15px;
 	line-height: 18px;
 }
+
 // .icon{
 // 	color: $text;
 // }
@@ -499,24 +533,29 @@ input{
 		font-size: 13px;
 		color: $light-text;
 	}
-	h4{
+	.fake-h4{
 		margin-top: 30px;
 		margin-bottom: 25px;
 	}
 	.button-std{
 		min-width: 260px;
 	}
+	@include max-screen(768px){
+		padding-top: 0;
+	}  
 }
 .ams-card-wrapper{
 	.ams-card{
 		@include col();
 		@include size(4);
 		@include size-mdr(6);
-		@include size-xs(12);
+		@include size-sm(12);
 		margin-bottom: 30px;
 
 		&--wide{
 			@include size(12);
+			@include size-mdr(12);
+
 		}
 		@include max-screen(576px){
 			margin-bottom: 20px;
@@ -567,8 +606,15 @@ input{
 		line-height: 12px;
 		text-transform: uppercase;
 	}
-	h3{
+	h2{
+		@extend .fake-h3;
 		min-height: 55px;	
+		margin-bottom: 20px;
+		@include max-screen(768px){
+			min-height: 1px;
+		}  
+	}
+	h3, .fake-h3{
 		margin-bottom: 20px;
 	}
 
@@ -636,6 +682,7 @@ input{
 			right: 0;
 			font-size: 100px;
 			color: #fff;
+		 
 		}
 	}
 	&__block{
@@ -664,6 +711,10 @@ input{
 	&--dashed{
 		background-color: transparent;
 		border: 1px dashed $light-text;
+		@include max-screen( 768px){
+				display: none;	
+		}	
+
 	}
 	&--empty{
 		position: relative;
@@ -677,7 +728,35 @@ input{
 			right: 20px;
 			font-size: 128px;
 			color: #fff;
+			
+			@include max-screen(670px){
+				font-size: 100px;
+			}
+
+			@include max-screen(576px){
+
+				font-size: 128px;
+			}
+			@include max-screen(358px){
+				
+				font-size: 90px;
+			}
 		}
+
+		h3, .fake-h3{
+			@include max-screen( 768px){
+					padding-right: 128px;
+
+			}
+			@include max-screen( 358px){
+				padding-right: 100px;	
+			}
+		}
+
+		@include max-screen(576px){
+			padding-right: 20px;
+		}
+
 	}
 	&__placeholder-top,
 	&__placeholder-bottom{
@@ -686,13 +765,16 @@ input{
 		}
 	}
 	&__placeholder-bottom{
-		position: absolute;
-		bottom: 15px;
+		// position: absolute;
+		// bottom: 15px;
 		left: 20px;
+		margin-top: auto;
+		margin-bottom: 15px;
 
 	}	
 	&__placeholder-top{
 		margin-bottom: 15px;
+
 	}
 
 	&--template{
@@ -725,6 +807,7 @@ input{
 		display: -o-flex;
 		display: flex;
 		margin-bottom: 30px;
+		flex-direction: row;
 
 		&.ams-card--dashed{
 			height: 150px;	
@@ -743,30 +826,54 @@ input{
 
 				&-Plus{
 					color: #fff;
+	
+				}
+				&-arrow-right{
+
+					@include max-screen( 768px){
+						display: none;	
+					}
 				}
 			}
-			
+			@include max-screen( 768px){
+						padding-right: 0;			
+					}	
+
 		}
 
-
-		h3{
+		h3, .fake-h3{
 			min-height: 1px;
 			margin-top: 10px;
+			margin-bottom: 10px;
+
+			@include max-screen(576px){
+				margin-top: 0;
+				margin-bottom: 20px;
+			}
+ 
 		}
 		.ams-card__img{
 			flex-shrink: 0;
 			width: 270px;
 			height: 150px;
+			max-width: 	none;
+			margin-left: 0;	
 			margin-right: 0;
 			border-top-right-radius: 5px;
 			border-bottom-left-radius: 5px;
 			border-top-right-radius: 5px;
 			position: relative;
 			overflow: hidden;
+			background:   center top no-repeat;
+			background-size: cover;
 
 			img{
 				@include absolute-center;
 			}
+
+			@include max-screen( 576px){
+				width: 100%;
+			}  
 
 		}
 		.ams-card__header{
@@ -790,7 +897,7 @@ input{
 			.ams-card__tarif{
 				color: #A1C81C;
 				text-transform: uppercase;
-
+				font-family: $semi;
 			}
 		}
 		.ams-card__body{
@@ -799,6 +906,12 @@ input{
 			justify-content: space-between;
 			padding-left: 30px;
 			padding-right: 30px;
+			margin-top: 0;
+
+			@include max-screen(576px){
+				display: block;
+			}  
+			 
 		}
 		.ams-card__bottom{
 			// position: absolute;
@@ -827,6 +940,9 @@ input{
 				color: #FF3827;
 			}
 		}
+		@include max-screen( 576px){
+			flex-wrap:wrap;
+		} 
 	}
 
 	&--wide-empty{
@@ -834,11 +950,130 @@ input{
 		color: #fff;
 		background-color: $green;
 
+		.ams-card__img{
+
+			@include max-screen( 576px){
+				height: 66px;
+				margin-bottom: 19px;
+				background: #FFFFFF;
+				opacity: 0.2;
+				border-radius: 5px;
+
+
+			}
+		}
 		.ams-card__img img{
 			max-width: 82%;
 			max-height: 82%;	
+
+			@include max-screen( 576px){
+				display: none;	
+			}
+		}
+		&.with-arrow{
+			.icon-Plus{
+				@include max-screen( 768px){
+					right: 20px;
+					font-size: 50px;	
+				}
+				@include max-screen( 576px){
+						font-size: 100px;
+						bottom: 18px;
+						top: 	auto;		
+				}
+				@include max-screen( 576px){
+						font-size: 129px;
+					
+				}
+				
+			}
+			@include max-screen( 768px){
+				padding-right: 0;	
+			}
+			.ams-card__body{
+				@include max-screen( 768px){
+						padding-right: 100px;
+						padding-left: 10px;	
+				}
+				
+			}
+
+			@include max-screen( 576px){
+				padding-right: 20px;
+			}
+			
+		}
+		.ams-card__placeholder-top{
+
+			@include max-screen(576px){
+					
+				height: 66px;
+				background: #FFFFFF;
+				opacity: 0.2;
+				border-radius: 5px;
+
+				img{
+					display: none;
+				}
+			}
+		}
+		.ams-card__header{
+				@include max-screen( 576px){
+					display: none;	
+				}
+		}
+		.ams-card__bottom{
+				@include max-screen( 576px){
+					margin-left: 0;	
+				}
+				img:not(.two-stripes){
+						@include max-screen( 576px){
+							display: none;	
+						}
+
+				}
+
+		}
+		h3{
+				@include max-screen( 576px){
+					margin-bottom: 22px;	
+				}
+			
+		}
+		@include max-screen( 576px){
+			max-height: none;
+			padding-left: 20px;
+			padding-top: 20px;	
+		}	
+	}
+}
+.ams-card--wide{
+	.ams-card__body{
+		flex: 1 1 auto;
+		padding-right: 105px;
+
+		.icon-arrow-right{
+			@include absolute-center-old;
+			font-size: 100px;
+			color: $green;
+			right: 0;
+			left: auto;
+			@include max-screen(768px){
+					display: none;
+				}  	
 		}
 
+		@include max-screen(768px){
+			padding-right: 30px;
+		}  
+	}
+	.ams-card__bottom{
+		.two-stripes{
+			display: none;
+			@include max-screen(576px){
+				display: inline;
+			}  
+		}
 	}
 }
 .ams-tiles{
@@ -862,7 +1097,7 @@ input{
 	margin-bottom: 30px;
 	color: $text;
 	text-decoration: none;
-	h3{
+	h3, .fake-h3{
 		margin-bottom: 15px;
 	}
 	p{
@@ -883,7 +1118,8 @@ input{
 		}
 		
 	}
-	h4{
+	h2{
+		@extend .fake-h4;
 		padding: 0 20px 45px 20px ;
 	}
 	&__bottom{
@@ -966,6 +1202,7 @@ input{
 		margin: 0;
 		font-size: 15px;
 		font-family: $bold;
+		line-height: normal;
 	}
 	@include max-screen(768px){
 		margin-bottom: 20px;
@@ -976,6 +1213,10 @@ input{
 	@include size(8);
 	@include size-md(6);
 	@include size-sm(12);
+	
+	.button{
+		margin-top: 3px;
+	}
 }
 .ams-link{
 	color: #656F78;
@@ -1018,6 +1259,30 @@ input{
 
 	}
 }
+.link-backward{
+	display: none;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 25px;
+	vertical-align: middle;
+	color: $light-text;
+	font-family: $bold;
+	text-decoration: none;
+
+	.icon{
+		margin-right: 3px;
+		margin-right: 13px;
+		font-size: 16px;
+		vertical-align: text-top;
+	}
+	@include max-screen(768px){
+		display: block;
+	}
+	@include max-screen(576px){
+		margin-top: 23px;
+	}
+}
+
 .ams-socials{
 	
 	li{
@@ -1073,6 +1338,15 @@ input{
 		vertical-align: middle;
 		list-style-type: none;
 		margin: 0 15px;
+
+		@include max-screen(375px){
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		@include max-screen(320px){
+			margin-left: 5px;
+			margin-right: 5px;
+		}  
 		
 	}
 }
@@ -1200,7 +1474,17 @@ input{
 	li{
 		display: inline-block;
 		list-style-type: none;
-		margin-right: 46px;
+		margin-right: 16px;
+		.icon{
+			// position: absolute;
+			// left: -30px;
+			// top: 50%;
+			margin-right:  16px;
+			font-size: 16px;
+			// margin-top: -8px;
+			vertical-align: middle;
+			color: $accent;
+		}
 		a{
 			position: relative;
 			font-family: $bold;
@@ -1208,29 +1492,26 @@ input{
 			line-height: 27px;
 			color: $text;
 			text-decoration: none;
+			vertical-align: middle;
 
-			.icon{
-				position: absolute;
-				left: -30px;
-				top: 50%;
-				font-size: 16px;
-				margin-top: -8px;
-				vertical-align: middle;
-				color: $accent;
-			}
 		}
 
 
 		&:first-child{
-			a{
 				.icon{
 					display: none;
 				}
-			}
 		}
 		&:last-child{
 			a{
 				color: $light-text;
+			}
+		}
+
+		@include max-screen(768px){
+			a{
+				font-size: 16px;
+				line-height: 130%;
 			}
 		}
 
@@ -1242,7 +1523,7 @@ input{
 			&:after{
 				content: '/';
 				display: inline-block;
-				// vertical-align: middle;
+				vertical-align: middle;
 				margin-right: 6px;
 				margin-left: 6px;
 				font-size: 22px;
@@ -1259,10 +1540,49 @@ input{
 
 		}
 	}
+	&--mob-modf{
+		li{
+			display: none;
+			&:last-child{
+				display: block;
+				padding-left: 46px;
+				a{
+					font-size: 22px;
+					line-height: 27px;
+					color: $text;
+					
+				}
+				.icon{
+					display: none;
+				}
+			}
+			&:nth-last-child(2){
+				display: block;
+				position: relative;
+				margin-bottom: 11px;
+				padding-left: 46px;
+
+				a{
+					font-size: 15px;
+					color: $light-text;
+					line-height: 18px;
+					
+				}
+				.icon{
+					@include absolute-center;
+					left: 5px;
+					right: auto;
+					color: $light-text;
+				}
+			}
+		}
+	}
+
 }
 .mfp-close {
 		right: -5px;
 		top: -5px;	
+
 
 }
 button.mfp-close, button.mfp-arrow{
@@ -1270,6 +1590,12 @@ button.mfp-close, button.mfp-arrow{
 }
 .mfp-close-btn-in .mfp-close{
 	color: transparent;
+
+}
+button.mfp-close{
+		@include max-screen(768px){
+			display: none;
+		}  
 
 }
 form{

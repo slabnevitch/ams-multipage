@@ -17,15 +17,41 @@
 			flex-shrink: 0;	
 		}
 
-		@include max-screen(480px){
-			justify-content: space-between;
-		}
+		// @include max-screen(480px){
+		// 	justify-content: space-between;
+		// }
 		.ams-logo{
 			@include max-screen(960px){
 				margin-right: 30px;
 			}
+			@include max-screen(576px){
+				margin-top: 2px;
+			}
+			@include max-screen(480px){
+				margin-left: 78px;
+				margin-right: 0;
+				flex-shrink: 0;
+			}
+			@include max-screen(320px){
+				margin-left: 50px;
+
+			}
 		}
 	}
+
+	.button-backward{
+		margin-left: 0;
+		@include max-screen(960px){
+			margin-left: 30px;	
+		}
+		@include max-screen(768px){
+			display: none;
+		}
+	}
+
+	@include max-screen(576px){
+		position: relative;
+	}  
 
 }
 .ams-logo{
@@ -40,8 +66,9 @@
 		margin-right: 90px;
 	}
 	@include max-screen(480px){
-		max-width: 130px;
+		max-width: 126px;
 		margin-right: 0;
+
 	}
 }
 .header-right{
@@ -52,9 +79,7 @@
 			display: none;
 		}
 	}
-	@include max-screen(480px){
-		display: none;
-	}
+	
 }
 .main-tel{
 	position: relative;
@@ -84,29 +109,7 @@
 	}
 
 }
-.header-backward{
-	display: block;
-	.icon{
-		position: absolute;
-		top: 50%;
-		left: -35px;
-		margin-top: -8px;
-		font-size: 16px;
-	}
-	@include max-screen(960px){
-		margin-left: 30px;	
-	}
-	@include max-screen(576px){
-		margin-left: 0;
-		font-size: 12px;
-		padding: 5px 10px;	
 
-		.icon{
-			left: -25px;
-		}
-	}
-
-}
 .main-menu{
 	li{
 		margin-right: 42px;
@@ -165,13 +168,28 @@
 	// 	background-image: url(../img/icons-svg/arrow-left.svg);
 	// }
 
-	.icon{
+	.icon-arrow-right{
 			position: absolute;
 		left: -25px;
 		top: 50%;
 		transform: translateY(-50%);
 		font-size: 16px;
 	}
+	.icon-enter{
+		display: none;
+		font-size: 24px;
+		@include max-screen(480px){
+			display: block;
+		}
+	}
+	span, .icon-arrow-right{
+		@include max-screen(480px){
+			display: none;
+		}
+	}
+	@include max-screen(780px){
+		margin-left: 0;
+	}  
 
 }
 .ams-account{
@@ -211,6 +229,9 @@
 			font-size: 5px;
 			color: $light-text;
 		}
+		@include max-screen(576px){
+			display: none;
+		}  
 	}
 	&__dropdown{
 		display: none;
@@ -220,7 +241,7 @@
 		left: 0;
 		top: 103%;
 		background-color: #fff;
-		box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+		box-shadow: 0px 5px 21px rgba(197, 197, 197, 0.25);
 		border-radius: 5px;
 		z-index: 99;
 		li{
@@ -239,7 +260,33 @@
 					font-family: $bold;
 				}
 				
+				@include max-screen(576px){
+					font-size: 16px;
+					font-family: $bold;
+				}  
 			}
+
+
+			&:last-child{
+				@include max-screen(576px){
+					
+					a{
+
+						color: $light-text;
+
+						&:hover{
+
+							color: #fff;
+
+						}
+					}
+				}
+			}
+
+			@include max-screen(576px){
+				margin-bottom: 10px;
+			}  
+
 		}
 	}
 	&.open{
@@ -248,7 +295,12 @@
 		}
 	}
 	@include max-screen(768px){
-		display: none;
+		margin-left: 0;
+	}  
+	@include max-screen(576px){
+		position: static;
+		
 	}
+
 }
 /*---end header---*/

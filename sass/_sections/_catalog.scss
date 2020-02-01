@@ -12,20 +12,45 @@
 		z-index: 0;
 		@extend .bg-gray;
 		// background-color: gray;
+
+		@include max-screen(1300px){
+			width: 50%;
+		} 
+		@include max-screen(960px){
+				display: none;	
+		} 
 	}
 	&-wrapper{
 		position: relative;
 		z-index: 1;
+		@include max-screen(375px){
+			padding-left: 0;
+			padding-right: 0;
+		}  
 	}
+	@include max-screen(960px){
+		background-color: $gray-bg;
+	}
+	@include max-screen(576px){
+		margin-top: 23px;
+	}  
+
 }
 .catalog-sidebar{
 	@include col();
 	@include size(4);
+	@include size-mdr(3);
 	padding-right: 30px;
 	padding-top: 50px;
-	h3{
+	h1{
+		@extend .fake-h3;
 		text-transform: uppercase;
 		margin-bottom: 27px;
+
+		@include max-screen( 992px){
+			font-size: 18px;	
+			line-height: 	normal;
+		}  	
 	}
 	.sidebar-menu__list{
 		width: 100%;
@@ -41,10 +66,28 @@
 			margin-bottom: 20px;
 		}
 	}
+	.sidebar-menu__nav li a{
+		@include max-screen(1100px){
+			font-size: 22px;
+			
+		}
+		@include max-screen(960px){
+			font-size: 15px;
+			
+		}  
+	}
+	@include max-screen( 992px){
+		padding-right: 15px;	
+	}
+	@include max-screen( 960px){
+		display: none;	
+	}  
 }
 .catalog-content{
 	@include col();
 	@include size(8);
+	@include size-mdr(9);
+	@include size-mdd(12);
 	position: relative;
 	padding-top: 40px;
 
@@ -58,9 +101,17 @@
 		width: 30px;
 		height: 100%;
 		z-index: 0;
+
+		@include max-screen( 960px){
+			display: none;	
+		}  	
 	}
 	h2{
 		margin-bottom: 20px;
+		@include max-screen(375px){
+			padding-left: 20px;
+			padding-right: 20px;
+		}  	
 	}
 	.ams-card-wrapper{
 		position: relative;
@@ -68,15 +119,30 @@
 		z-index: 1;
 		.ams-card{
 			@include size(6);
+			@include size-sm(12);
 
 			&--wide{
 				@include size(12);
 			}
+			@include max-screen( 375px){
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;	
+			}  	
 		}
 
-		&:last-child{
-			// margin-bottom: 0;
+		&.wrapper-wide{
+			@include max-screen(375px){
+				margin-right: 0;
+				margin-left: 0;
+				padding-right: 0;
+				padding-left: 0;
+			}
 		}
 	}
-
+	@include max-screen( 375px){
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;	
+	}
 }
