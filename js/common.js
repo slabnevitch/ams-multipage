@@ -82,6 +82,15 @@
 			});
 		// end mobile-menu acordeon
 
+		// ams-banner add background-image
+			var $amsBanner = $('.ams-banner');
+
+			if($amsBanner.length > 0){
+				var imageUrl = $amsBanner.find('.ams-banner__img img').attr('src');
+				$amsBanner.attr('style', "background-image: url('"+imageUrl+"')");
+			}
+		// END ams-banner add background-image
+
 		// tabs
 			var $tabs = $('.tabs__item');
 
