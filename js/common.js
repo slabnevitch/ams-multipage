@@ -55,7 +55,7 @@
 					$parent = $th.closest('.sidebar-menu__item');
 					
 					$parent
-						.addClass('active')
+						.toggleClass('active')
 						.siblings()
 						.removeClass('active')
 				
@@ -63,7 +63,7 @@
 
 					$parent
 						.find('.sidebar-menu__subnav')
-						.removeClass('hidden');
+						.toggleClass('hidden');
 					
 					$parent
 						.siblings()
