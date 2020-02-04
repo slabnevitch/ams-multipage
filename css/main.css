@@ -5617,11 +5617,15 @@ input:-ms-input-placeholder {
   max-width: none;
   margin-left: 0;
   margin-right: 0;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
   position: relative;
   overflow: hidden;
   background: center top no-repeat;
@@ -5721,7 +5725,7 @@ input:-ms-input-placeholder {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding-right: 105px;
+  padding-right: 152px;
 }
 
 .ams-card--wide .ams-card__body .icon-arrow-right {
@@ -5732,13 +5736,17 @@ input:-ms-input-placeholder {
   margin: auto;
   position: absolute;
   font-size: 100px;
-  color: #BFDD57;
+  color: #F4F7FA;
   right: 0;
   left: auto;
 }
 
 .ams-card--wide .ams-card__bottom .two-stripes {
   display: none;
+}
+
+.ams-card--wide:hover .ams-card__body .icon-arrow-right {
+  color: #BFDD57;
 }
 
 .ams-tiles .ams-tile {
@@ -5823,6 +5831,10 @@ input:-ms-input-placeholder {
   vertical-align: middle;
   color: #95A3B1;
   font-size: 13px;
+}
+
+.ams-tile__bottom span {
+  vertical-align: middle;
 }
 
 .ams-tile__date {
@@ -6545,6 +6557,10 @@ li {
   padding-top: 43px;
 }
 
+.ams_popup__body .ams-popup__backward .button-backward {
+  margin-left: 43px;
+}
+
 .ams_popup__spheres {
   text-align: center;
 }
@@ -7025,6 +7041,16 @@ li {
   flex: 1 1 0;
 }
 
+.reviews-slide__right .fake-h3,
+.reviews-slide__right .ams-card h2,
+.ams-card .reviews-slide__right h2,
+.reviews-slide__right .catalog-sidebar h1,
+.catalog-sidebar .reviews-slide__right h1,
+.reviews-slide__right .paid-chapters-item__body h2,
+.paid-chapters-item__body .reviews-slide__right h2 {
+  padding-right: 150px;
+}
+
 .reviews-slide__img {
   position: relative;
   width: 300px;
@@ -7327,6 +7353,12 @@ li {
 .ams-banner--material .ams-banner__text {
   width: -webkit-calc(91.66667% - 30px);
   width: calc(91.66667% - 30px);
+}
+
+.ams-banner--material .ams-tile__views .icon {
+  font-size: 14px;
+  color: #fff;
+  vertical-align: middle;
 }
 
 .ams-banner__block {
@@ -7658,7 +7690,7 @@ li {
 .course-contents__item a .icon {
   display: none;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: -30px;
   font-size: 17px;
   color: #95A3B1;
@@ -7792,10 +7824,32 @@ li {
   width: 50%;
   margin: 0;
   position: relative;
+  display: block;
+  color: #303030;
+  background-color: #FFC700;
+  text-decoration: none;
+}
+
+.course-block .ams-card-wrapper .ams-card .button-black,
+.course-block .ams-card-wrapper .course-discount-card .button-black {
+  padding-top: 8px;
+}
+
+.course-block .ams-card-wrapper .ams-card:hover,
+.course-block .ams-card-wrapper .course-discount-card:hover {
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+  box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+}
+
+.course-block .ams-card-wrapper .ams-card:hover .button-black,
+.course-block .ams-card-wrapper .course-discount-card:hover .button-black {
+  background-color: #fff;
+  color: #303030;
 }
 
 .course-block .ams-card-wrapper .course-discount-card {
-  padding: 10px 0 23px 32px;
+  padding: 20px 0 23px 32px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
@@ -7879,18 +7933,18 @@ li {
 }
 
 .promo-date__counter {
-  display: inline-block;
-  vertical-align: middle;
+  margin-left: -12px;
 }
 
 .promo-date__counter > span {
   margin-left: 5px;
   font-size: 26px;
+  font-family: "MontserratSemiBold", sans-serif;
   vertical-align: top;
 }
 
 .promo-date__field {
-  width: 40px;
+  width: 46px;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
@@ -7933,6 +7987,7 @@ li {
 .paid-chapters .heading .reviews-slide__column a,
 .reviews-slide__column .paid-chapters .heading a {
   text-decoration: none;
+  color: #95A3B1;
 }
 
 .paid-chapters .heading .ams-link .icon,
@@ -8840,6 +8895,10 @@ table tbody tr:nth-child(odd) {
     max-width: 1140px;
   }
 
+  .ams-card--wide .ams-card__body {
+    padding-right: 130px;
+  }
+
   .material-soc ul {
     left: 0;
   }
@@ -8861,9 +8920,35 @@ table tbody tr:nth-child(odd) {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .ams-banner--material .ams-banner__text {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  .paid-chapters__top {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
 @media only screen and (max-width: 1100px) {
+  .ams-card--wide .ams-card__body {
+    padding-right: 105px;
+  }
+
   .ams-logo {
     margin-right: 90px;
+  }
+
+  .reviews-slide__right .fake-h3,
+  .reviews-slide__right .ams-card h2,
+  .ams-card .reviews-slide__right h2,
+  .reviews-slide__right .catalog-sidebar h1,
+  .catalog-sidebar .reviews-slide__right h1,
+  .reviews-slide__right .paid-chapters-item__body h2,
+  .paid-chapters-item__body .reviews-slide__right h2 {
+    padding-right: 0;
   }
 
   .indicators-right__img img {
@@ -8888,18 +8973,6 @@ table tbody tr:nth-child(odd) {
 
   .header-menu li {
     margin-right: 44px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .ams-banner--material .ams-banner__text {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-
-  .paid-chapters__top {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
   }
 }
 
@@ -9463,6 +9536,7 @@ table tbody tr:nth-child(odd) {
   .ams_popup__body {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 60px;
   }
 
   .ams_popup__body .ams-popup__backward {
@@ -9997,7 +10071,13 @@ table tbody tr:nth-child(odd) {
     align-items: center;
   }
 
-  .reviews-slide__right h3 {
+  .reviews-slide__right .fake-h3,
+  .reviews-slide__right .ams-card h2,
+  .ams-card .reviews-slide__right h2,
+  .reviews-slide__right .catalog-sidebar h1,
+  .catalog-sidebar .reviews-slide__right h1,
+  .reviews-slide__right .paid-chapters-item__body h2,
+  .paid-chapters-item__body .reviews-slide__right h2 {
     font-size: 15px;
     line-height: 18px;
   }
