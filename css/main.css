@@ -7367,6 +7367,10 @@ li {
 
 .ams-banner__block .ams-tile__bottom {
   position: static;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   padding-left: 0px;
   color: #fff;
 }
@@ -7838,8 +7842,8 @@ li {
 .course-block .ams-card-wrapper .ams-card:hover,
 .course-block .ams-card-wrapper .course-discount-card:hover {
   z-index: 1;
-  -webkit-box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
-  box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .course-block .ams-card-wrapper .ams-card:hover .button-black,
@@ -7977,6 +7981,11 @@ li {
 
 .tippy-tooltip [x-circle] {
   background-color: transparent;
+}
+
+.course-discount-wrapper:hover {
+  -webkit-box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+  box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
 }
 
 .free-lessons h1 {
@@ -8367,6 +8376,15 @@ article img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+article img + span {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 30px;
+  font-size: 13px;
+  color: #656F78;
+  text-align: center;
 }
 
 article figcaption {
@@ -8937,6 +8955,18 @@ table tbody tr:nth-child(odd) {
     padding-right: 105px;
   }
 
+  .ams-card--wide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
   .ams-logo {
     margin-right: 90px;
   }
@@ -9132,6 +9162,18 @@ table tbody tr:nth-child(odd) {
   .toggle-mnu {
     display: block;
     margin-right: 30px;
+  }
+
+  .ams-card--wide {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .header-inner .ams-logo {
@@ -9780,6 +9822,20 @@ table tbody tr:nth-child(odd) {
   /*Disable Animation on Mobile Devices*/
 }
 
+@media only screen and (max-width: 700px) {
+  .ams-card--wide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 @media only screen and (max-width: 670px) {
   .ams-card--empty .icon-Plus {
     font-size: 100px;
@@ -9962,6 +10018,18 @@ table tbody tr:nth-child(odd) {
 
   .ams-card--wide .ams-card__bottom .two-stripes {
     display: inline;
+  }
+
+  .ams-card--wide {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .link-backward {

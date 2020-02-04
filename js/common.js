@@ -104,7 +104,9 @@
 				.siblings()
 				.removeClass('tabs__item--active');
 
-				$tabs.find($href).removeClass('hidden')
+				console.log('[data-tab="'+$href+'"]');
+
+				$tabs.find('[data-tab="'+$href+'"]').removeClass('hidden')
 				.siblings()
 				.addClass('hidden');
 			});
@@ -254,12 +256,16 @@
 			if(document.querySelector('.scroll-pane')){
 				var scrollPane = $('.scroll-pane').jScrollPane({
 					verticalDragMaxHeight : 168,
-					animateScroll : true
+					animateScroll : true,
+					showArrows:false
 				});
 
 				var scrollPaneApi = scrollPane.data('jsp');
 
-				scrollPaneApi.reinitialise();
+				setTimeout(function() {
+					scrollPaneApi.reinitialise();
+					
+				}, 100);
 
 				$(window).resize(function() {
 					scrollPaneApi.reinitialise();
