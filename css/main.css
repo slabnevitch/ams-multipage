@@ -5082,7 +5082,12 @@ ol li a:hover {
 
 .button-backward {
   display: inline-block;
-  margin-left: 34px;
+  margin-left: 28px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-size: 15px;
 }
 
 .button-backward .icon {
@@ -5825,10 +5830,10 @@ input:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   font-size: 13px;
   color: #95A3B1;
 }
@@ -6646,14 +6651,10 @@ li {
   flex-shrink: 0;
 }
 
-.header .button-backward {
-  margin-left: 0;
-}
-
 .ams-logo {
   display: block;
   max-width: 185px;
-  margin-right: 115px;
+  margin-right: 47px;
 }
 
 .ams-logo img {
@@ -7330,6 +7331,10 @@ li {
 .ams-banner--material .wrapper {
   position: relative;
   height: 538px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .ams-banner--material:after {
@@ -7400,7 +7405,6 @@ li {
 
 .ams-banner__text .ams-banner__block {
   position: absolute;
-  left: 15px;
   width: 100%;
   bottom: 0;
 }
@@ -7713,7 +7717,6 @@ li {
   position: absolute;
   width: 24px;
   left: -7px;
-  text-align: right;
   color: #95A3B1;
 }
 
@@ -7740,6 +7743,10 @@ li {
 
 .course-contents__item.visited a .course-contents__val {
   font-family: "MontserratBold", sans-serif;
+}
+
+.course-contents__item.visited.light a .course-contents__val {
+  font-family: "MontserratRegular", sans-serif;
 }
 
 .course-contents__homework {
@@ -7810,6 +7817,7 @@ li {
 .course-video__bottom a .icon {
   vertical-align: middle;
   font-size: 16px;
+  margin-top: -2px;
 }
 
 .mejs__overlay-button {
@@ -8872,6 +8880,8 @@ table tbody tr:nth-child(odd) {
 
 /* Large Devices, Wide Screens */
 
+/*# sourceMappingURL=maps/main.css.map */
+
 @media only screen and (min-width: 320px) {
   /**/
 }
@@ -8943,11 +8953,6 @@ table tbody tr:nth-child(odd) {
 }
 
 @media screen and (max-width: 1100px) {
-  .ams-banner--material .ams-banner__text {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-
   .paid-chapters__top {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
@@ -9095,6 +9100,11 @@ table tbody tr:nth-child(odd) {
   .companies-logo {
     width: -webkit-calc(25% - 30px);
     width: calc(25% - 30px);
+  }
+
+  .ams-banner--material .ams-banner__text {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
   }
 
   .ams-banner--red-field .ams-banner__text {
@@ -10348,6 +10358,10 @@ table tbody tr:nth-child(odd) {
     margin-top: 20px;
   }
 
+  .footer {
+    padding-bottom: 47px;
+  }
+
   html {
     font-size: 9px;
   }
@@ -10416,6 +10430,14 @@ table tbody tr:nth-child(odd) {
     margin-right: .0;
   }
 
+  .button,
+  .ams-link-with-hover:before,
+  .main-menu li a,
+  .programs-nav-container span,
+  .footer-middle .main-menu li a {
+    padding-top: 8px;
+  }
+
   .ams_popup {
     padding-left: 0;
     padding-right: 0;
@@ -10459,6 +10481,10 @@ table tbody tr:nth-child(odd) {
     border-radius: 0;
   }
 
+  .footer p {
+    line-height: 120%;
+  }
+
   .footer-left .ams-logo {
     margin-bottom: 0;
     max-width: 130px;
@@ -10491,10 +10517,18 @@ table tbody tr:nth-child(odd) {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 27px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .footer-middle__top .ams-phone-block {
     margin-left: 15px;
+  }
+
+  .footer-middle__top .ams-phone-block p {
+    display: block;
   }
 
   .footer-middle .main-menu {
@@ -10511,6 +10545,10 @@ table tbody tr:nth-child(odd) {
     -ms-flex-order: 0;
     order: 0;
     margin-top: 0;
+  }
+
+  .footer-right p a {
+    line-height: 150%;
   }
 
   .footer-right__mob-text br {
@@ -10804,4 +10842,3 @@ table tbody tr:nth-child(odd) {
     margin-left: 4px;
   }
 }
-/*# sourceMappingURL=maps/main.css.map */

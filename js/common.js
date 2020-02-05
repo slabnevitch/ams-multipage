@@ -160,7 +160,7 @@
 							$wantedItem = $(this.currItem.inlineElement[0]).find('[href="#' + dataTab +'"]').parent(),
 							wantedId = $wantedItem.find('.tabs__link').attr('href'),
 							$wantedItemParent = $wantedItem.closest('.tabs'),
-							$modificatedItem = $wantedItemParent.find(wantedId);
+							$modificatedItem = $wantedItemParent.find('[data-tab="'+wantedId+'"]');
 
 						$wantedItem
 							.addClass('tabs__item--active')
