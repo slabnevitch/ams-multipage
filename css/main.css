@@ -5720,6 +5720,13 @@ input:-ms-input-placeholder {
   max-height: 82%;
 }
 
+.ams-card--wide {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .ams-card--wide .ams-card__body {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -7568,6 +7575,8 @@ li {
 }
 
 .catalog-sidebar .ams-checks label {
+  width: auto;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -7839,19 +7848,6 @@ li {
   padding-top: 8px;
 }
 
-.course-block .ams-card-wrapper .ams-card:hover,
-.course-block .ams-card-wrapper .course-discount-card:hover {
-  z-index: 1;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.course-block .ams-card-wrapper .ams-card:hover .button-black,
-.course-block .ams-card-wrapper .course-discount-card:hover .button-black {
-  background-color: #fff;
-  color: #303030;
-}
-
 .course-block .ams-card-wrapper .course-discount-card {
   padding: 20px 0 23px 32px;
   -webkit-border-radius: 5px;
@@ -7986,6 +7982,11 @@ li {
 .course-discount-wrapper:hover {
   -webkit-box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
   box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+}
+
+.course-discount-wrapper:hover .course-discount-card .button-black {
+  background-color: #fff;
+  color: #303030;
 }
 
 .free-lessons h1 {
@@ -8938,33 +8939,9 @@ table tbody tr:nth-child(odd) {
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .ams-banner--material .ams-banner__text {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-
-  .paid-chapters__top {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-}
-
 @media only screen and (max-width: 1100px) {
   .ams-card--wide .ams-card__body {
     padding-right: 105px;
-  }
-
-  .ams-card--wide {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .ams-logo {
@@ -9003,6 +8980,18 @@ table tbody tr:nth-child(odd) {
 
   .header-menu li {
     margin-right: 44px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .ams-banner--material .ams-banner__text {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  .paid-chapters__top {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
   }
 }
 
@@ -9162,18 +9151,6 @@ table tbody tr:nth-child(odd) {
   .toggle-mnu {
     display: block;
     margin-right: 30px;
-  }
-
-  .ams-card--wide {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
   }
 
   .header-inner .ams-logo {
@@ -9822,20 +9799,6 @@ table tbody tr:nth-child(odd) {
   /*Disable Animation on Mobile Devices*/
 }
 
-@media only screen and (max-width: 700px) {
-  .ams-card--wide {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
 @media only screen and (max-width: 670px) {
   .ams-card--empty .icon-Plus {
     font-size: 100px;
@@ -10018,18 +9981,6 @@ table tbody tr:nth-child(odd) {
 
   .ams-card--wide .ams-card__bottom .two-stripes {
     display: inline;
-  }
-
-  .ams-card--wide {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
   }
 
   .link-backward {

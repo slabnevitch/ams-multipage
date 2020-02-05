@@ -104,8 +104,6 @@
 				.siblings()
 				.removeClass('tabs__item--active');
 
-				console.log('[data-tab="'+$href+'"]');
-
 				$tabs.find('[data-tab="'+$href+'"]').removeClass('hidden')
 				.siblings()
 				.addClass('hidden');
@@ -202,7 +200,6 @@
 				$spheresSelectors.each(function(ind, elem ) {
 					if($(elem).hasClass('sphere-selected')){
 						count++;
-						console.log('hasClass!');
 					}
 				});
 				
@@ -312,7 +309,6 @@
 		// end mediaelement
 
 		// tooltip
-				console.log(document.querySelectorAll('.to-tippy') == null);
 				if(document.querySelectorAll('.to-tippy').length > 0 ){
 					var ttippy = new tippy('.to-tippy', {
 						position: 'right',
