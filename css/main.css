@@ -7979,6 +7979,11 @@ li {
   background-color: transparent;
 }
 
+.course-discount-wrapper .ams-card:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .course-discount-wrapper:hover {
   -webkit-box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
   box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
@@ -8867,8 +8872,6 @@ table tbody tr:nth-child(odd) {
 
 /* Large Devices, Wide Screens */
 
-/*# sourceMappingURL=maps/main.css.map */
-
 @media only screen and (min-width: 320px) {
   /**/
 }
@@ -8939,6 +8942,18 @@ table tbody tr:nth-child(odd) {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .ams-banner--material .ams-banner__text {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  .paid-chapters__top {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .ams-card--wide .ams-card__body {
     padding-right: 105px;
@@ -8980,18 +8995,6 @@ table tbody tr:nth-child(odd) {
 
   .header-menu li {
     margin-right: 44px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .ams-banner--material .ams-banner__text {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-
-  .paid-chapters__top {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
   }
 }
 
@@ -10801,3 +10804,4 @@ table tbody tr:nth-child(odd) {
     margin-left: 4px;
   }
 }
+/*# sourceMappingURL=maps/main.css.map */
