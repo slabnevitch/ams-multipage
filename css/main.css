@@ -5823,17 +5823,6 @@ input:-ms-input-placeholder {
   width: 100%;
   left: 0;
   bottom: 15px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   font-size: 13px;
   color: #95A3B1;
 }
@@ -5851,6 +5840,14 @@ input:-ms-input-placeholder {
 
 .ams-tile__date {
   margin-right: 40px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.ams-tile__views {
+  margin-right: 40px;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 .ams-tile__img {
@@ -6204,7 +6201,7 @@ input:-ms-input-placeholder {
 .ams-breadcrumbs li {
   display: inline-block;
   list-style-type: none;
-  margin-right: 16px;
+  margin-right: 10px;
 }
 
 .ams-breadcrumbs li .icon {
@@ -6250,53 +6247,6 @@ input:-ms-input-placeholder {
 
 .ams-breadcrumbs--slash li:last-child:after {
   display: none;
-}
-
-.ams-breadcrumbs--mob-modf li {
-  display: none;
-}
-
-.ams-breadcrumbs--mob-modf li:last-child {
-  display: block;
-  padding-left: 46px;
-}
-
-.ams-breadcrumbs--mob-modf li:last-child a {
-  font-size: 22px;
-  line-height: 27px;
-  color: #303030;
-}
-
-.ams-breadcrumbs--mob-modf li:last-child .icon {
-  display: none;
-}
-
-.ams-breadcrumbs--mob-modf li:nth-last-child(2) {
-  display: block;
-  position: relative;
-  margin-bottom: 11px;
-  padding-left: 46px;
-}
-
-.ams-breadcrumbs--mob-modf li:nth-last-child(2) a {
-  font-size: 15px;
-  color: #95A3B1;
-  line-height: 18px;
-}
-
-.ams-breadcrumbs--mob-modf li:nth-last-child(2) .icon {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  left: 5px;
-  right: auto;
-  color: #95A3B1;
 }
 
 .mfp-close {
@@ -7716,7 +7666,7 @@ li {
 .course-contents__item a .course-contents__num {
   position: absolute;
   width: 24px;
-  left: -7px;
+  left: 2px;
   color: #95A3B1;
 }
 
@@ -8952,20 +8902,9 @@ table tbody tr:nth-child(odd) {
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .paid-chapters__top {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-}
-
 @media only screen and (max-width: 1100px) {
   .ams-card--wide .ams-card__body {
     padding-right: 105px;
-  }
-
-  .ams-logo {
-    margin-right: 90px;
   }
 
   .reviews-slide__right .fake-h3,
@@ -9000,6 +8939,13 @@ table tbody tr:nth-child(odd) {
 
   .header-menu li {
     margin-right: 44px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .paid-chapters__top {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
   }
 }
 
@@ -9809,6 +9755,53 @@ table tbody tr:nth-child(odd) {
     width: 100%;
   }
 
+  .ams-breadcrumbs--mob-modf li {
+    display: none;
+  }
+
+  .ams-breadcrumbs--mob-modf li:last-child {
+    display: block;
+    padding-left: 46px;
+  }
+
+  .ams-breadcrumbs--mob-modf li:last-child a {
+    font-size: 22px;
+    line-height: 27px;
+    color: #303030;
+  }
+
+  .ams-breadcrumbs--mob-modf li:last-child .icon {
+    display: none;
+  }
+
+  .ams-breadcrumbs--mob-modf li:nth-last-child(2) {
+    display: block;
+    position: relative;
+    margin-bottom: 11px;
+    padding-left: 46px;
+  }
+
+  .ams-breadcrumbs--mob-modf li:nth-last-child(2) a {
+    font-size: 15px;
+    color: #95A3B1;
+    line-height: 18px;
+  }
+
+  .ams-breadcrumbs--mob-modf li:nth-last-child(2) .icon {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 5px;
+    right: auto;
+    color: #95A3B1;
+  }
+
   /*Disable Animation on Mobile Devices*/
 }
 
@@ -10430,11 +10423,10 @@ table tbody tr:nth-child(odd) {
     margin-right: .0;
   }
 
-  .button,
-  .ams-link-with-hover:before,
-  .main-menu li a,
-  .programs-nav-container span,
-  .footer-middle .main-menu li a {
+  .button:not(.button-lg),
+  .ams-link-with-hover:not(.button-lg):before,
+  .main-menu li a:not(.button-lg),
+  .programs-nav-container span:not(.button-lg) {
     padding-top: 8px;
   }
 
