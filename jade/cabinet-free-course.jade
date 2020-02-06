@@ -133,8 +133,8 @@ block content
 					p Тех. поддержка
 				
 				.course-block
-					.wrapper-wide.ams-card-wrapper
-						.course-discount-card
+					.wrapper-wide.ams-card-wrapper.course-discount-wrapper
+						a(href="#").course-discount-card
 							.course-discount -35%
 								p скидка на курс
 
@@ -142,30 +142,30 @@ block content
 								span Акция закончится через:
 								.promo-date__counter
 									.promo-date__field#days
-										.promo-date__val 00
+										.promo-date__val 2
 										span дни
 
 									span /
 
 									.promo-date__field#hours
-										.promo-date__val 00
+										.promo-date__val 22
 										span часы
 
 									span /
 
 									.promo-date__field#minutes
-										.promo-date__val 00
+										.promo-date__val 09
 										span минуты
 
 									span /
 
 									.promo-date__field#seconds
-										.promo-date__val 00
+										.promo-date__val 39
 										span секунды
 							
 							+icon('arrow-right')
 							
-							a(href="#").button.button-black.button-sm Подробнее 
+							span.button.button-black.button-sm Подробнее 
 
 						a(href="#").ams-card
 							.ams-card__top
@@ -206,4 +206,4 @@ block page-scripts
 	script(src='js/libs/jsscrollpane/js/jquery.jscrollpane.min.js')
 	script(src='js/libs/mediaelement/mediaelement-and-player.min.js')
 	script(src='js/libs/tippyjs/dist/tippy.min.js')
-	script(src='js/discount-counter.js')
+	//- script(src='js/discount-counter.js')

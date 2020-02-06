@@ -1,4 +1,4 @@
-extends _misc/main-with-account
+extends _misc/main-with-backward
 
 block title
 	| Платный курс. Разделы
@@ -33,7 +33,7 @@ block content
 			ul.acordeon-list.paid-chapters__items
 				- for (var i=0; i < 3; i++)
 					li.acordeon-item.paid-chapters-item.acordeon-item-with-sublist
-						.paid-chapters__link.bg-gray(href="#")
+						.paid-chapters__link.bg-gray
 							.paid-chapters-item__num= (i+1)
 							.paid-chapters-item__kind.paid-chapters-item__kind--mob Модуль
 							.paid-chapters-item__body

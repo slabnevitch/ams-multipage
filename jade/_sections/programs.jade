@@ -4,8 +4,8 @@ section.programs.ams-std-sect.bg-gray
 		- var navs = ['Revit', 'AutoCAD', 'ARCHICAD', '3ds Max'];
 		.programs-nav-container
 
-			ul.programs-nav
-				//- li Популярные
+			ul.programs-nav.programs-nav--with-fake-link
+				li Популярные
 				each nav, index in navs
 					li
 						a(href="#")= nav

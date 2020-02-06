@@ -10,6 +10,9 @@
 			// font-family: $med;
 		color: #656F78;
 		}
+		@include max-screen(480px){
+			line-height: 120%;
+		}  
 	}
 	.ams-logo,
 	.ams-socials{
@@ -20,6 +23,9 @@
 	}
 	@include max-screen(960px){
 		padding-bottom: 65px;
+	}
+	@include max-screen(576px){
+		padding-bottom: 47px;
 	}
 }
 .footer-left{
@@ -43,6 +49,8 @@
 		@include max-screen(480px){
 			display: inline-block;
 			margin-left: auto;
+			// position: relative;
+			// top: 4px;
 		}
 	}
 	p{
@@ -59,6 +67,7 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 27px;
+		align-items: flex-start;
 	}
 
 }
@@ -89,7 +98,14 @@
 			@include max-screen(480px){
 				margin-left: 15px;
 			}
+			p{
+				@include max-screen(480px){
+					display: block;
+				}  
+			}
 		}
+
+	
 		@include max-screen(960px){
 			margin-bottom: 15px;
 		}
@@ -98,6 +114,8 @@
 		li{
 			a{
 				@extend .button;
+
+				
 			}
 		}
 
@@ -106,6 +124,7 @@
 		}
 	}
 	p{
+
 		@include max-screen(480px){
 			display: none;
 		}
@@ -131,6 +150,9 @@
 	p{
 		a{
 			display: block;
+			@include max-screen(480px){
+				line-height: 150%;
+			}  
 		}
 	}
 	@include max-screen(992px){
@@ -140,6 +162,12 @@
 
 	&__mob-text{
 		display: none;
+		br{
+			display: none;
+			@include max-screen(480px){
+				display: block;
+			}
+		}
 		@include max-screen(480px){
 			display: block;
 		}

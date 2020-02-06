@@ -55,7 +55,7 @@
 					$parent = $th.closest('.sidebar-menu__item');
 					
 					$parent
-						.addClass('active')
+						.toggleClass('active')
 						.siblings()
 						.removeClass('active')
 				
@@ -63,7 +63,7 @@
 
 					$parent
 						.find('.sidebar-menu__subnav')
-						.removeClass('hidden');
+						.toggleClass('hidden');
 					
 					$parent
 						.siblings()
@@ -82,6 +82,15 @@
 			});
 		// end mobile-menu acordeon
 
+		// ams-banner add background-image
+			var $amsBanner = $('.ams-banner');
+
+			if($amsBanner.length > 0){
+				var imageUrl = $amsBanner.find('.ams-banner__img img').attr('src');
+				$amsBanner.attr('style', "background-image: url('"+imageUrl+"')");
+			}
+		// END ams-banner add background-image
+
 		// tabs
 			var $tabs = $('.tabs__item');
 
@@ -95,7 +104,7 @@
 				.siblings()
 				.removeClass('tabs__item--active');
 
-				$tabs.find($href).removeClass('hidden')
+				$tabs.find('[data-tab="'+$href+'"]').removeClass('hidden')
 				.siblings()
 				.addClass('hidden');
 			});
@@ -151,7 +160,7 @@
 							$wantedItem = $(this.currItem.inlineElement[0]).find('[href="#' + dataTab +'"]').parent(),
 							wantedId = $wantedItem.find('.tabs__link').attr('href'),
 							$wantedItemParent = $wantedItem.closest('.tabs'),
-							$modificatedItem = $wantedItemParent.find(wantedId);
+							$modificatedItem = $wantedItemParent.find('[data-tab="'+wantedId+'"]');
 
 						$wantedItem
 							.addClass('tabs__item--active')
@@ -191,7 +200,6 @@
 				$spheresSelectors.each(function(ind, elem ) {
 					if($(elem).hasClass('sphere-selected')){
 						count++;
-						console.log('hasClass!');
 					}
 				});
 				
@@ -245,12 +253,16 @@
 			if(document.querySelector('.scroll-pane')){
 				var scrollPane = $('.scroll-pane').jScrollPane({
 					verticalDragMaxHeight : 168,
-					animateScroll : true
+					animateScroll : true,
+					showArrows:false
 				});
 
 				var scrollPaneApi = scrollPane.data('jsp');
 
-				scrollPaneApi.reinitialise();
+				setTimeout(function() {
+					scrollPaneApi.reinitialise();
+					
+				}, 100);
 
 				$(window).resize(function() {
 					scrollPaneApi.reinitialise();
@@ -297,7 +309,6 @@
 		// end mediaelement
 
 		// tooltip
-				console.log(document.querySelectorAll('.to-tippy') == null);
 				if(document.querySelectorAll('.to-tippy').length > 0 ){
 					var ttippy = new tippy('.to-tippy', {
 						position: 'right',

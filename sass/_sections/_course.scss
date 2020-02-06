@@ -37,6 +37,7 @@
 	@include col();
 	@include size(4);
 	@include size-mdd(12);
+	// padding-right: 30px;
 	@include max-screen( 576px){
 			width: 100%;
 			margin-left: 0;
@@ -62,13 +63,29 @@
 }
 .ams-scroll{
 	max-height: 900px;
+	
+	.jspPane{
+	// padding-right: 50px !important;
+		
+	}
+	// .course-contents__chapter{
+	// 	padding-right: 30px;
+	// 	padding-left: 30px;
+	// 	&:first-child{
+	// 		margin-top: 30px;
+	// 	}
+	// 	.course-contents__item{
+	// 		a{
+	// 		}
+	// 	}
+
+	// }
 	@include max-screen( 992px){
 			max-height: 807px;	
 	}
 }
 .ams-scroll__inner{
 	padding: 30px;
-
 }
 .course-contents__chapter{
 	margin-bottom: 30px;
@@ -97,7 +114,7 @@
 		.icon{
 			display: none;
 			position: absolute;
-			top: 0;
+			top: 2px;
 			left: -30px;
 			font-size: 17px;
 			color:$light-text;
@@ -105,10 +122,10 @@
 		.course-contents__num{
 			position: absolute;
 			width: 24px;
-			left: -7px;
+			left: 2px;
 			// width: 44px;
 			// left: -27px;
-			text-align: right;
+			// text-align: right;
 			// margin-right: 19px;
 			color: $light-text;
 		}
@@ -143,6 +160,14 @@
 				font-family: $bold;
 			}
 			
+		}
+		&.light{
+			a{
+				.course-contents__val{
+
+					font-family: $reg;
+				}
+			}
 		}
 	}
 
@@ -211,6 +236,7 @@
 			vertical-align: middle;
 			// display: inline-block;
 			font-size: 16px;	
+			margin-top: -2px;
 		}
 	}
 
@@ -237,13 +263,22 @@
 			width: 50%;
 			margin: 0;
 			position: relative;
+			display: block;
+			color: $text;
+			background-color: #FFC700;
+			text-decoration: none;
 			
+			.button-black{
+				padding-top: 8px;
+			}
 			@include max-screen( 640px){
 				width: 100%;	
 			}
+			
+			
 		}
 		.course-discount-card{
-			padding: 10px 0 23px 32px;
+			padding: 20px 0 23px 32px;
 			border-radius: 5px;	
 			
 			.button{
@@ -340,6 +375,7 @@ font-family: $black;
 }
 .promo-date{
 	margin-top: 12px;
+
 	margin-bottom: 8px;
 	color: #fff;
 	& > span{
@@ -350,20 +386,19 @@ font-family: $black;
 	}
 }
 .promo-date__counter{
-	display: inline-block;
-	// margin-left: 30px;
-	vertical-align: middle;
+	margin-left: -12px;
 
 	& > span{
 		margin-left: 5px;
 		font-size: 26px;
+		font-family: $semi;
 	// line-height: 32px;
 	
 	vertical-align: top;
 	}
 }
 .promo-date__field{
-	width: 40px;
+	width: 46px;
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
@@ -404,5 +439,24 @@ font-family: $black;
 	@include max-screen(576px){
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+}
+.course-discount-wrapper{
+	.ams-card{
+		&:hover{
+			box-shadow: none;
+		}
+		
+	}
+	&:hover{
+		box-shadow: 0px 0px 15px rgba(80, 150, 255, 0.3);
+
+		.course-discount-card{
+			.button-black{
+				background-color: #fff;
+				color: $text;
+			}
+		}
+		
 	}
 }

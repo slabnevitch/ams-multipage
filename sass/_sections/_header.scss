@@ -40,7 +40,7 @@
 	}
 
 	.button-backward{
-		margin-left: 0;
+		// margin-left: 0;
 		@include max-screen(960px){
 			margin-left: 30px;	
 		}
@@ -57,14 +57,14 @@
 .ams-logo{
 	display: block;
 	max-width: 185px;
-	margin-right: 115px;
+	margin-right: 47px;
 
 	img{
 		max-width: 100%;
 	}
-	@include max-screen(1100px){
-		margin-right: 90px;
-	}
+	// @include max-screen(1100px){
+	// 	margin-right: 90px;
+	// }
 	@include max-screen(480px){
 		max-width: 126px;
 		margin-right: 0;

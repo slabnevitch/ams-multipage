@@ -169,14 +169,11 @@
     </div>
     <header class="header">
       <div class="wrapper">
-        <div class="header-inner"><a href="#" class="toggle-mnu"><span></span></a><a href="#" class="ams-logo"><img src="img/logo.svg" alt="alt"></a>
-          <ul class="main-menu">
-            <li class="active"><a href="#" data-link="courses-menu">Все курсы </a></li>
-          </ul>
-          <div class="header-right"><a href="tel" class="main-tel">8-000-200-05-18
-                  <svg class="icon icon-phone ">
-                    <use xlink:href="img/icons-svg/symbol/sprite.svg#phone"></use>
-                  </svg></a>
+        <div class="header-inner"><a href="#" class="toggle-mnu"><span></span></a><a href="#" class="ams-logo"><img src="img/logo.svg" alt="alt"></a><a href="#" class="button-backward button button-empty">мои курсы
+                <svg class="icon icon-arrow-left ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                </svg></a>
+          <div class="header-right">
             <div class="ams-account">
               <div class="ams-userpic"><img src="img/sting.jpg" alt="alt"></div>
               <div class="ams-account__username"><span>Константинович</span>
@@ -228,7 +225,7 @@
         </div>
         <ul class="acordeon-list paid-chapters__items">
           <li class="acordeon-item paid-chapters-item acordeon-item-with-sublist">
-            <div href="#" class="paid-chapters__link bg-gray">
+            <div class="paid-chapters__link bg-gray">
               <div class="paid-chapters-item__num">1</div>
               <div class="paid-chapters-item__kind paid-chapters-item__kind--mob">Модуль</div>
               <div class="paid-chapters-item__body">
@@ -309,7 +306,7 @@
             </ul>
           </li>
           <li class="acordeon-item paid-chapters-item acordeon-item-with-sublist">
-            <div href="#" class="paid-chapters__link bg-gray">
+            <div class="paid-chapters__link bg-gray">
               <div class="paid-chapters-item__num">2</div>
               <div class="paid-chapters-item__kind paid-chapters-item__kind--mob">Модуль</div>
               <div class="paid-chapters-item__body">
@@ -390,7 +387,7 @@
             </ul>
           </li>
           <li class="acordeon-item paid-chapters-item acordeon-item-with-sublist">
-            <div href="#" class="paid-chapters__link bg-gray">
+            <div class="paid-chapters__link bg-gray">
               <div class="paid-chapters-item__num">3</div>
               <div class="paid-chapters-item__kind paid-chapters-item__kind--mob">Модуль</div>
               <div class="paid-chapters-item__body">
@@ -519,7 +516,7 @@
           </ul>
           <p><a href="#" class="ams-link">Политика конфиденциальности</a><a href="#" class="ams-link">Публичная оферта</a></p>
           <div class="footer-right__mob-text">
-            <p>Все права защищены. Использование материалов данного сайта разрешено только с согласия правообладателей.</p>
+            <p>Все права защищены. <br>Использование материалов данного сайта разрешено только с согласия правообладателей.</p>
             <p>© 2010–2019 <br>Учебный центр МЕРКУЛОВ.А</p>
           </div>
         </div>
@@ -535,7 +532,7 @@
         </div>
         <div class="ams_popup__body">
           <ul class="tabs__content">
-            <li id="item1" class="tabs__item">
+            <li data-tab="#item1" class="tabs__item">
               <div class="ams_popup__spheres">
                 <div class="fake-h3">Какие сферы вам интересны?</div>
                 <div class="spheres-list"><a href="#" class="button button-empty button-std">Маркетинг</a><a href="#" class="button button-empty button-std">Бизнес и менеджмент</a><a href="#" class="button button-empty button-std">Дизайн и UX</a><a href="#" class="button button-empty button-std">Программирование</a><a href="#" class="button button-empty button-std">Аналитика и данные</a>
@@ -568,7 +565,7 @@
                         <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
                       </svg></a></div>
             </li>
-            <li id="item2" class="tabs__item hidden">
+            <li data-tab="#item2" class="tabs__item hidden">
               <form>
                 <label>
                   <input type="text" placeholder="Электронная почта">
@@ -577,7 +574,7 @@
                   <input type="text" placeholder="Пароль">
                 </label>
                 <div class="ams_popup__form-bottom">
-                  <button class="button button-std button-blue">Создать аккаунт</button>
+                  <button class="button button-std button-blue">войти</button>
                   <p>Нажимая кнопку, принимаю условия <br>политики и пользовательского <br>соглашения</p>
                   <div class="fake-h4">Создать аккаунт через соцсети</div>
                   <ul class="ams-socials-colorised">

@@ -378,12 +378,23 @@ ol{
    		border-color: $blue;
   	}
   }
+
+  &:not(.button-lg){
+  	@include max-screen(480px){
+  		padding-top: 8px;
+  	} 
+  }
 	
    
 }
 .button-backward{
 	display: inline-block;
-	margin-left: 34px;
+	margin-left: 28px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 13px;
+	padding-right: 13px;
+	font-size: 15px;
 	.icon{
 		position: absolute;
 		top: 50%;
@@ -859,9 +870,11 @@ input{
 			max-width: 	none;
 			margin-left: 0;	
 			margin-right: 0;
-			border-top-right-radius: 5px;
-			border-bottom-left-radius: 5px;
-			border-top-right-radius: 5px;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-top-left-radius: 0;
 			position: relative;
 			overflow: hidden;
 			background:   center top no-repeat;
@@ -1048,14 +1061,15 @@ input{
 	}
 }
 .ams-card--wide{
+	align-items: center;
 	.ams-card__body{
 		flex: 1 1 auto;
-		padding-right: 105px;
+		padding-right: 152px;
 
 		.icon-arrow-right{
 			@include absolute-center-old;
 			font-size: 100px;
-			color: $green;
+			color: $gray-bg;
 			right: 0;
 			left: auto;
 			@include max-screen(768px){
@@ -1063,6 +1077,12 @@ input{
 				}  	
 		}
 
+		@include max-screen(1200px){
+			padding-right: 130px;
+		}
+		@include max-screen(1100px){
+			padding-right: 105px;
+		}
 		@include max-screen(768px){
 			padding-right: 30px;
 		}  
@@ -1075,6 +1095,15 @@ input{
 			}  
 		}
 	}
+	&:hover{
+		.ams-card__body{
+
+			.icon-arrow-right{
+				color: $green;
+			}
+		}
+	}
+	
 }
 .ams-tiles{
 	.ams-tile{
@@ -1129,12 +1158,12 @@ input{
 		width: 100%;
 		left: 0;
 		bottom: 15px;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		align-items: flex-start;
+		// display: -webkit-flex;
+		// display: -moz-flex;
+		// display: -ms-flex;
+		// display: -o-flex;
+		// display: flex;
+		// align-items: flex-end;
 		font-size: 13px;
 		color: $light-text;
 
@@ -1144,9 +1173,19 @@ input{
 			color: $light-text;
 			font-size: 13px;	
 		}
+		span{
+			vertical-align: middle;
+		}
 	}
 	&__date{
 		margin-right: 40px;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	&__views{
+		margin-right: 40px;
+		display: inline-block;
+		vertical-align: bottom;
 	}
 	&__text{
 		@include max-screen(375px){
@@ -1215,7 +1254,7 @@ input{
 	@include size-sm(12);
 	
 	.button{
-		margin-top: 3px;
+		// margin-top: 3px;
 	}
 }
 .ams-link{
@@ -1474,7 +1513,7 @@ input{
 	li{
 		display: inline-block;
 		list-style-type: none;
-		margin-right: 16px;
+		margin-right: 10px;
 		.icon{
 			// position: absolute;
 			// left: -30px;
@@ -1540,44 +1579,7 @@ input{
 
 		}
 	}
-	&--mob-modf{
-		li{
-			display: none;
-			&:last-child{
-				display: block;
-				padding-left: 46px;
-				a{
-					font-size: 22px;
-					line-height: 27px;
-					color: $text;
-					
-				}
-				.icon{
-					display: none;
-				}
-			}
-			&:nth-last-child(2){
-				display: block;
-				position: relative;
-				margin-bottom: 11px;
-				padding-left: 46px;
-
-				a{
-					font-size: 15px;
-					color: $light-text;
-					line-height: 18px;
-					
-				}
-				.icon{
-					@include absolute-center;
-					left: 5px;
-					right: auto;
-					color: $light-text;
-				}
-			}
-		}
-	}
-
+	
 }
 .mfp-close {
 		right: -5px;

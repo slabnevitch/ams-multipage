@@ -12,7 +12,7 @@
 
 		.ams_popup__body
 				ul.tabs__content
-					li#item1.tabs__item
+					li.tabs__item(data-tab="#item1")
 						.ams_popup__spheres
 							.fake-h3 Какие сферы вам интересны?
 							- var list = ['Маркетинг', 'Бизнес и менеджмент', 'Дизайн и UX', 'Программирование', 'Аналитика и данные'];
@@ -59,7 +59,7 @@
 									+icon('arrow-left')
 
 
-					li#item2.tabs__item.hidden
+					li.tabs__item.hidden(data-tab="#item2")
 						form
 							label
 								input(type="text" placeholder="Электронная почта")
@@ -67,7 +67,7 @@
 								input(type="text" placeholder="Пароль")
 
 							.ams_popup__form-bottom
-								button.button.button-std.button-blue Создать аккаунт
+								button.button.button-std.button-blue войти
 								p Нажимая кнопку, принимаю условия 
 									br
 									| политики и пользовательского 

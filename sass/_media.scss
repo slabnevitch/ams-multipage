@@ -62,6 +62,43 @@
 		order: 2;
 		width: 100%;
 	}
+	.ams-breadcrumbs--mob-modf{
+		li{
+			display: none;
+			&:last-child{
+				display: block;
+				padding-left: 46px;
+				a{
+					font-size: 22px;
+					line-height: 27px;
+					color: $text;
+					
+				}
+				.icon{
+					display: none;
+				}
+			}
+			&:nth-last-child(2){
+				display: block;
+				position: relative;
+				margin-bottom: 11px;
+				padding-left: 46px;
+
+				a{
+					font-size: 15px;
+					color: $light-text;
+					line-height: 18px;
+					
+				}
+				.icon{
+					@include absolute-center;
+					left: 5px;
+					right: auto;
+					color: $light-text;
+				}
+			}
+		}
+	}
 	/*Disable Animation on Mobile Devices*/
 // 	.animated{
 

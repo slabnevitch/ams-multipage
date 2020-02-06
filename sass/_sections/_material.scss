@@ -74,6 +74,9 @@
 	}
 }
 article{
+	ol, ul{
+		margin-bottom: 0;	
+	}
 	h2{
 		margin-top: 48px;
 		margin-bottom: 20px;
@@ -89,17 +92,32 @@ article{
 	p{
 		margin: 0;
 	}
+	img{
+		max-width: 100%;
+		margin-top: 30px;	
+		display: block;	
+		margin-left: auto;
+		margin-right: auto;
+
+		& + span{
+			display: block;
+			margin-top: 6px;
+			margin-bottom: 30px;	
+			font-size: 13px;
+			color: $ams-link;
+			text-align: center;	
+		}
+	}
+	figcaption {
+		margin-top: 6px;
+		margin-bottom: 30px;	
+		font-size: 13px;
+		color: $ams-link;
+		text-align: center;	
+	}
 	figure{
 		margin: 30px 0;
 		text-align: center;
-		img{
-			max-width: 100%;
-		}
-		figcaption {
-			margin-top: 6px;
-			font-size: 13px;
-			color: $ams-link;
-		}
 		@include max-screen(576px){
 			margin-top: 20px;
 			margin-bottom: 20px;

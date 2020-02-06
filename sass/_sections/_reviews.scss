@@ -66,8 +66,15 @@
 	}
 	&__right{
 		flex: 1 1 0;
+		.fake-h3{
+			padding-right: 150px;
+
+			@include max-screen(1100px){
+				padding-right: 0;
+			}
+		}
 		@include max-screen(576px){
-			h3{
+			.fake-h3{
 				font-size: 15px;
 				line-height: 18px;
 			}

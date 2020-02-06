@@ -16,25 +16,23 @@ block content
 
 	
 	.ams-banner.ams-banner--material
-		.ams-banner__img
-			img(src="img/material/banner-gray-lg.jpg", alt="alt")
 		.wrapper
 			.ams-banner__text
 				.ams-banner__block
-					h1 Идеальный шаблон AutoCAD - 
-						br 
-						| какой он? Подробный разбор
+					h1 Идеальный шаблон AutoCAD - какой он? Подробный разбор
 
-
-					img(src="img/material/banner-gray.jpg", alt="alt").banner-grayscale
+					//- img(src="img/material/banner-gray.jpg", alt="alt").banner-grayscale
+					
+					.ams-banner__img
+						img(src="img/material/banner-gray-lg.jpg", alt="alt")
 					
 					.ams-tile__bottom
 						.ams-tile__date 27.09.2018 г
 						.ams-tile__views
 							+icon('eye')
-							span 27.09.2018 г
+							span 45655
 	
-	sect.material
+	section.material
 		.wrapper.mat-jce.article-wrapper
 			.material-soc.material-soc--toped
 				.material-soc__icons
@@ -54,9 +52,9 @@ block content
 
 					p В статье я не делаю попытки детально осветить все аспекты создания шаблона, так как для этого потребуется написать целую книгу )) Тут я, всего лишь, сделал попытку систематизировать процесс наполнения шаблона и привести ряд практических советов по созданию удобной пользовательской среды.
 
-					figure
-						img(src="img/material/image1.jpg", alt="alt")
-						figcaption Создание текстового стиля
+						
+					img(src="img/material/image1.jpg", alt="alt")
+					span Создание текстового стиля
 
 					p Главное, что следует понять - любой новый файл AutoCAD, создается на основе какого-либо шаблона.
 					p Есть 4 способа создания файла (см. скриншот ниже):
@@ -66,9 +64,9 @@ block content
 						each item in list
 							li= item
 
-					figure
-						img(src="img/material/image2.jpg", alt="alt")
-						figcaption Создание текстового стиля
+					
+					img(src="img/material/image2.jpg", alt="alt")
+					span Создание текстового стиля
 
 					p Главное, что следует понять - любой новый файл AutoCAD, создается на основе какого-либо шаблона.
 					p Есть 4 способа создания файла (см. скриншот ниже):

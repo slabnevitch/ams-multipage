@@ -67,7 +67,7 @@
 			display: block;
 			margin-top: 10px;
 		}  
-		@include max-screen(358px){
+		@include max-screen(320px){
 			font-size: 13px;
 		}
 	}
@@ -89,7 +89,7 @@
 				font-size: 77px;
 				line-height: 68px;
 			}  
-			@include max-screen(358px){
+			@include max-screen(320px){
 				font-size: rem(100);
 				line-height: rem(90);
 
@@ -101,7 +101,7 @@
 				font-size: 55px;
 
 			}
-			@include max-screen(358px){
+			@include max-screen(320px){
 				font-size: rem(73);
 				
 			}
@@ -117,7 +117,7 @@
 				font-size: 63px;
 				line-height: 53px;
 			}
-			@include max-screen(358px){
+			@include max-screen(320px){
 				font-size: rem(70);
 				line-height: rem(60);
 			}
@@ -127,7 +127,7 @@
 			@include max-screen(576px){
 				font-size: 45px;
 			}
-			@include max-screen(358px){
+			@include max-screen(320px){
 				font-size: rem(50);
 
 			}
@@ -142,7 +142,7 @@
 				font-size: 50px;
 				line-height: 50px;
 			}
-			@include max-screen(358px){
+			@include max-screen(320px){
 				font-size: rem(50);
 				line-height: rem(50);
 			}
@@ -152,7 +152,7 @@
 			@include max-screen(576px){
 				font-size: 35px;
 			}
-			@include max-screen(358px){
+			@include max-screen(320px){
 				font-size: rem(35);
 			}
 		}

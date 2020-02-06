@@ -69,10 +69,15 @@
 	@include max-screen(768px){
 		padding-left: 20px;
 		padding-right: 20px;
+		padding-bottom: 60px;
 	}
 	.ams-popup__backward{
 		display: none;
 		padding-top: 43px;
+
+		.button-backward{
+			margin-left: 43px;
+		}
 
 		@include max-screen(768px){
 			display: block;

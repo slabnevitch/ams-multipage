@@ -125,4 +125,18 @@
 			}
 		}
 	}
+	&--with-fake-link{
+		li{
+			&:first-child{
+				padding: 6px 15px;
+				font-size: 15px;
+			// @extend .button;
+			color: #fff;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-family: $bold;
+			background-color: $accent;
+		}
+		}
+	}
 }
