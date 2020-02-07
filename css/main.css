@@ -7715,9 +7715,10 @@ li {
 
 .course-contents__homework .icon {
   font-size: 16px;
-  margin-right: 19px;
+  margin-right: 17px;
   vertical-align: text-top;
   color: #95A3B1;
+  margin-left: 2px;
 }
 
 .jspVerticalBar {
